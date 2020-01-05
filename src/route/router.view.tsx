@@ -29,7 +29,7 @@ const IRouterView=({routes}:IRouterConfig)=>{
               }
               if(item.type==='redirect'){
                 //  重定向
-                return <Router.Redirect to={item.to} from={item.from} ></Router.Redirect>
+                return <Router.Redirect key={index} to={item.to} from={item.from} ></Router.Redirect>
               } 
             //   容错
               return null
