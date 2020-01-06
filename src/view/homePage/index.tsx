@@ -24,19 +24,19 @@ const FooterList:object[]=[
         icon:'icon iconfont icon-bangzhuzhongxin'
     },
     {
-        path:'/homepage/myMessing',
-        text:'我的',
-        icon:'icon iconfont icon-wode'
-    },
-    {
-        path:'/homepage/shoppingCart',
-        text:'购物车',
-        icon:'icon iconfont icon-duozhongzhifu'
-    },
-    {
         path:'/homepage/special',
         text:'专题',
         icon:'icon iconfont icon-pinpai'
+    },
+    {
+      path:'/homepage/myMessing',
+      text:'我的',
+      icon:'icon iconfont icon-wode'
+    },
+    {
+      path:'/homepage/shoppingCart',
+      text:'购物车',
+      icon:'icon iconfont icon-duozhongzhifu'
     }
 ]
 
