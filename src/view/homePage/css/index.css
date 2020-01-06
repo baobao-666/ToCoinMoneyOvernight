@@ -8,6 +8,19 @@
 main {
   flex: 1;
 }
+.classfiy-wrap{
+  width: 100%;
+  height: 100%;
+  
+  /* display: flex;
+  flex-direction: column; */
+}
+.inp input{
+  flex: 1;
+  border:none;
+  background: #ccc;
+  
+}
 
 footer {
   width: 100%;
