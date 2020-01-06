@@ -7,7 +7,7 @@ import userStore from '../../../utils/useState'
 const  Home: React.FC = () => {
 
   let store = userStore();
-  let {Home}=store
+  let { Home }=store
   useEffect(()=>{
     Home.getHomeData()
   },[])
