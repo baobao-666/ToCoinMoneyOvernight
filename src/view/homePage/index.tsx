@@ -16,21 +16,22 @@ const FooterList:object[]=[
         text:'首页'
     },
     {
-        path:'/homepage/classify',
-        text:'分类'
+      path:'/homepage/special',
+      text:'专题'
     },
     {
-        path:'/homepage/myMessing',
-        text:'我的'
+        path:'/homepage/classify',
+        text:'分类'
     },
     {
         path:'/homepage/shoppingCart',
         text:'购物车'
     },
     {
-        path:'/homepage/special',
-        text:'专题'
-    }
+      path:'/homepage/myMessing',
+      text:'我的'
+    },
+    
 ]
 
 export default (props:ItemType) => {
