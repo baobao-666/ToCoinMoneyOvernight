@@ -1,4 +1,8 @@
 export interface specialType{
-    page:string,
-    size:string
+    page:number,
+    size:number,
+    scene_pic_url:string,
+    title:string,
+    subtitle:string,
+    price_info:number
 }

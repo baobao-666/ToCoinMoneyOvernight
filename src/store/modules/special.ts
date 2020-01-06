@@ -10,10 +10,11 @@ export default class CreateStore{
     @observable
     list:specialType[]=[];
 
-    
     @action
-    async getSpecialData(list:specialType[]){
-        let res =await getSpecialData(list);
-        this.list = res;
+    async getSpecialData(obj:object){
+        const res:any =await getSpecialData(obj);
+        console.log(res,'res');
+        
+        this.list = res.data;
     }
 }

@@ -13,5 +13,5 @@ import request from '../utils/request';
 
 // 省市
 export let getSpecialData = (params: any)=>{
-    return  request.get('/topic/list',{params:{page:params.payload,size:params.size}})
+    return  request.get('/topic/list',{page:params.payload,size:params.size})
 }
