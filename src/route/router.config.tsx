@@ -15,8 +15,6 @@ import SpecialCode from '../view/homePage/special/index'
 
 
 
-
-
 /**
  * 路由数据列表
  * type 类型 普通路由 route  重定向redirect
