@@ -5,6 +5,9 @@ import * as Router from 'react-router-dom'
 
 import './css/index.css'
 
+import FooterTab from '../../components/footertab/index';
+
+
 interface ItemType{
     routes: any,
     history:any
@@ -39,13 +42,13 @@ export default (props:ItemType) => {
       <main>
            <IRouterView routes={props.routes} ></IRouterView>
       </main>
+      <FooterTab FooterList={FooterList} ></FooterTab>
       <footer>
       {
        FooterList.map((item:any,index:number)=>{
           return  <Router.NavLink key={index} to={item.path} >{item.text}</Router.NavLink>
         })
       }
-     
       </footer>
     </div>
   );
