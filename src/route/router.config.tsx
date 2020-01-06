@@ -2,15 +2,16 @@
 import { IRouterItem } from './index.d'
 
 // 一级路由
-import HomeCode from '../view/home/index'
-import ClassifyCode from '../view/classify/index'
-import MyMessingCode from '../view/myMessing/index'
-import ShoppingCartCode from '../view/shoppingCart/index'
-import SpecialCode from '../view/special/index'
+import HomePage from '../view/homePage/index'
+import LoginPage from '../view/login/index';
 
 // 二级路由
+import HomeCode from '../view/homePage/home/index'
+import ClassifyCode from '../view/homePage/classify/index'
+import MyMessingCode from '../view/homePage/myMessing/index'
+import ShoppingCartCode from '../view/homePage/shoppingCart/index'
+import SpecialCode from '../view/homePage/special/index'
 
-// 暂无二级
 
 
 
@@ -26,40 +27,57 @@ import SpecialCode from '../view/special/index'
  * from 来自哪里
  */
 const RouterConfig:IRouterItem[]=[
-    {
-     type:"route",
-     path:'/home',
-     component:HomeCode,
-     children:[]
-    },
-    {
-     type:"route",
-     path:'/classify',
-     component:ClassifyCode,
-     children:[]
-    },
-    {
-     type:"route",
-     path:'/myMessing',
-     component:MyMessingCode,
-     children:[]
-    },
-    {
-     type:"route",
-     path:'/shoppingCart',
-     component:ShoppingCartCode,
-     children:[]
-    },
-    {
-     type:"route",
-     path:'/special',
-     component:SpecialCode,
-     children:[]
-    },
+   {
+    type:"route",
+    path:'/homepage',
+    component:HomePage,
+    children:[
+        {
+            type:"route",
+            path:'/homepage/home',
+            component:HomeCode,
+            children:[]
+           },
+           {
+            type:"route",
+            path:'/homepage/classify',
+            component:ClassifyCode,
+            children:[]
+           },
+           {
+            type:"route",
+            path:'/homepage/myMessing',
+            component:MyMessingCode,
+            children:[]
+           },
+           {
+            type:"route",
+            path:'/homepage/shoppingCart',
+            component:ShoppingCartCode,
+            children:[]
+           },
+           {
+            type:"route",
+            path:'/homepage/special',
+            component:SpecialCode,
+            children:[]
+           },{
+            type:"redirect",
+            from:"/homepage",
+            to:"/homepage/home"
+           }
+    ]
+   },
+   {
+    type:"route",
+    path:'/login',
+    component:LoginPage,
+    children:[]
+   },
     {
      type:"redirect",
      from:"/",
-     to:"/home"
+     to:"/homepage"
     }
 ]
 
