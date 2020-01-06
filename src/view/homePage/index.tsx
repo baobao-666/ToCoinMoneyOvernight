@@ -1,12 +1,11 @@
 import React from 'react';
 import IRouterView from '../../route/router.view';
 
-import * as Router from 'react-router-dom'
-
 import './css/index.css'
 
 import FooterTab from '../../components/footertab/index';
 
+import '../../static/icon/iconfont.css'
 
 interface ItemType{
     routes: any,
@@ -16,23 +15,28 @@ interface ItemType{
 const FooterList:object[]=[
     {
         path:'/homepage/home',
-        text:'首页'
+        text:'首页',
+        icon:'icon iconfont icon-shouye'
     },
     {
         path:'/homepage/classify',
-        text:'分类'
+        text:'分类',
+        icon:'icon iconfont icon-bangzhuzhongxin'
     },
     {
         path:'/homepage/myMessing',
-        text:'我的'
+        text:'我的',
+        icon:'icon iconfont icon-wode'
     },
     {
         path:'/homepage/shoppingCart',
-        text:'购物车'
+        text:'购物车',
+        icon:'icon iconfont icon-duozhongzhifu'
     },
     {
         path:'/homepage/special',
-        text:'专题'
+        text:'专题',
+        icon:'icon iconfont icon-pinpai'
     }
 ]
 
@@ -43,13 +47,6 @@ export default (props:ItemType) => {
            <IRouterView routes={props.routes} ></IRouterView>
       </main>
       <FooterTab FooterList={FooterList} ></FooterTab>
-      <footer>
-      {
-       FooterList.map((item:any,index:number)=>{
-          return  <Router.NavLink key={index} to={item.path} >{item.text}</Router.NavLink>
-        })
-      }
-      </footer>
     </div>
   );
 }
