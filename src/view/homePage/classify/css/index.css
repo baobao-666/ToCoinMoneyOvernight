@@ -1,0 +1,43 @@
+.classfiy-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.classfiy-wrap .searchWrap{
+    width: 100%;
+    height:50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.04rem 0.08rem 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+    margin-bottom:1px;
+}
+.classfiy-wrap .searchWrap .searchInput{
+    width: 90%;
+    height: 70%;
+    background: #ededed;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+.classfiy-wrap .searchWrap .searchInput>span{
+    margin-left: 10px;
+}
+.categogContet{
+    flex: 1;
+    display: flex;
+}
+.categogContet .leftContent{
+    flex: 3;
+    background:#fff;
+    border-right: 1px solid #ccc;
+}
+.categogContet .rightContent{
+    flex: 7;
+    overflow-y: scroll;
+}
