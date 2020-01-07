@@ -7,8 +7,8 @@ import {getSpecialData} from '../../api/special'
 
 // 定义数据
 export default class CreateStore{
-    @observable
-    list:specialType[]=[];
+    // @observable
+    // list:specialType[]=[];
 
     
     @action
