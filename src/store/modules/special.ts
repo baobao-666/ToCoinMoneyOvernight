@@ -7,12 +7,14 @@ import {getSpecialData} from '../../api/special'
 
 // 定义数据
 export default class CreateStore{
-    // @observable
-    // list:specialType[]=[];
+    @observable
+    list:specialType[]=[];
 
-    
     @action
-    async getSpecialData(list:specialType[]){
-        let res =await getSpecialData(list);
+    async getSpecialData(obj:object){
+        const res:any =await getSpecialData(obj);
+        console.log(res,'res');
+        
+        this.list = res.data;
     }
 }
