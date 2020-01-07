@@ -46,5 +46,25 @@ const ShoppCart: React.FC = () => {
   )
 
 }
+//       <div className='count'>
+//         <div className='list'>
+//         <div>
+
+//         </div>
+// <div className='lefts'>
+// <img src="http://yanxuan.nosdn.127.net/8392725765cdd57fdae3f173877f4bda.png" alt=""/>
+// </div>
+// <div className='center'>
+// <div>星云酥 180克/3颗</div>
+// <div></div>
+// <div>￥26</div>
+// </div>
+// <div className='rights'>
+// <div>x19</div>
+// </div>
+//       </div>
+//     </div>
+//       <div className='foot'>
+//       
 
 export default ShoppCart;
