@@ -13,8 +13,8 @@ export default class CreateStore{
     @action
     async getSpecialData(obj:object){
         const res:any =await getSpecialData(obj);
-        console.log(res,'res');
-        
         this.list = res.data;
+        console.log(res.data,'data');
+        
     }
 }

@@ -11,12 +11,16 @@ const  Special: React.FC = () => {
   let {Special} = store;
   useEffect(()=>{
     Special.getSpecialData({page,size})
-  },[Special])
+  },[Special]);
+
+  let changeDetail= (id:number)=>{
+    console.log(id,'id')
+  }
   return useObserver(()=>(
     <div className="specai-wrap">
         {
           Special.list.map((item,index)=>{
-            return <div className="specialele" key={index}>
+            return <div className="specialele" key={index} onClick={()=>changeDetail(item.id)}>
                   <img src={item.scene_pic_url} alt=""/>
                   <div>{item.title}</div>
                   <div>{item.subtitle}</div>
