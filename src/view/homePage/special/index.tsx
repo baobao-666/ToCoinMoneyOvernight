@@ -6,8 +6,8 @@ const  Special: React.FC = () => {
   let store = useStore();
   let {Special} = store;
   useEffect(()=>{
-    Special.getSpecialData()
-  },[Special])
+    // Special.getSpecialData()
+  },[])
   return useObserver(()=>(
     <div className="specai-wrap">
       专题

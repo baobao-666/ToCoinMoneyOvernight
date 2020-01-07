@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as Router from 'react-router-dom'
 
-import './index.css'
+import './css/index.css'
 interface ItemType{
     FooterList:object[]
 }

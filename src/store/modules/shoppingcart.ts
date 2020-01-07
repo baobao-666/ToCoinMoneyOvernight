@@ -1,5 +1,3 @@
-// 引入泛型
-import {shopCartType} from '../types/shoppingcart'
 // 引入mobx
 import {observable,action,computed} from 'mobx'
 
