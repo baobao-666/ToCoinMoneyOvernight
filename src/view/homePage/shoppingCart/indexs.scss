@@ -22,7 +22,7 @@ height: 25px;
 
 }
 .count{
-  
+  display: flex;
     height: 100px;
     padding: 10px;
     padding-left: 0;
@@ -60,14 +60,15 @@ height: 25px;
 
 .center{
     flex: 1 1;
-    padding: 0 10px;
+    padding: 0 6px;
     min-width: 0;
+    
 }
 .center div{
     height: 33.333%;
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
     /* text-overflow: ellipsis; */
@@ -85,7 +86,7 @@ height: 25px;
     width: 100%;
     height: 50px;
     display: flex;
-align-items: center;
+   align-items: center;
     position:fixed;
     left: 0;
     bottom: 50px;
