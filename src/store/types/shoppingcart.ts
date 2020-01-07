@@ -1,3 +1,3 @@
-export interface shopCartType{
-    
+export interface shopCartType  {
+
 }

@@ -4,6 +4,7 @@ import { useObserver } from 'mobx-react-lite'
 import userStore from '../../../utils/useState'
 
 
+
 const  Home: React.FC = () => {
 
   let store = userStore();
@@ -14,7 +15,14 @@ const  Home: React.FC = () => {
 
   return useObserver(()=> 
     <div className="home-wrap">
-      首页
+      {
+       Home.itemKey.map((item:string,index:number)=>{
+          return  Home.list[item].map((val:any,ind:number)=>{
+              return <div key={ind} > {val.id} </div>
+            })
+       })
+     }
+      
     </div>
   );
 }
