@@ -1,0 +1,54 @@
+
+@function pxToRem($px) {
+    @return $px / 37.5px * 1rem;
+  }
+.login_wrap{
+    width: 100%;
+    height: 100%;
+}
+ .Logo{
+    width: 100%;
+    height: pxToRem(142px);
+    padding:pxToRem(8px) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ img{
+    width:pxToRem(177px);
+}
+
+.LogoMain{
+    padding: pxToRem(100px) pxToRem(20px) 0 pxToRem(20px);
+}
+ .inputWrap{
+    height: pxToRem(80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .inputWrap input{
+    width: 100%;
+    height: 100%;
+    border:0;
+    font-size: pxToRem(16px);
+    font-weight: bold;
+    padding-left:pxToRem(20px);
+}
+ .loginBtn{
+    width: 100%;
+    margin-top:pxToRem(10px);
+    border-radius:pxToRem(6px);
+}
+.loginBtn{
+    height: pxToRem(50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#108ee9;
+    color:#fff;
+    span{
+        font-size: pxToRem(16px);
+    }
+}

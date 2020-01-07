@@ -1,9 +1,13 @@
 import React from 'react'
 
-import './index.css'
+import style from './css/index.module.css'
+interface ItemType{
+    flag:boolean,
+    title?:string
+}
 
-export default ()=>{
-    return <div className="alert_wrap" >
-                弹框
+export default (props:ItemType)=>{
+    return <div className={`${style.alert_wrap} ${props.flag?style.active:''}`} >
+                {props.title}
            </div>
 }

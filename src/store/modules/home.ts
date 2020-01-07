@@ -2,7 +2,7 @@
 // 引入mobx
 import {observable, action} from 'mobx'
 
-import { getHomeData }  from '../../api/home'
+import { getHomeData, userlogin }  from '../../api/home'
 
 export default class CreateStore{
 
@@ -14,12 +14,20 @@ export default class CreateStore{
 
 
    @action
-    async  getHomeData(){
+    async getHomeData(){
     const res:any = await getHomeData()
     console.log('====================================');
     console.log(res);
     console.log('====================================');
        this.list = res
        this.itemKey = Object.keys(res)
-}
+   }
+
+   async userlogin(params:object){
+      const res:any = await userlogin(params)
+      if(res.errno===0){
+        localStorage.setItem('token',res.data.sessionKey)
+        localStorage.setItem('mobile',res.data.mobile)
+      }
+   }
 }

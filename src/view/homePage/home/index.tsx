@@ -3,6 +3,7 @@ import { useObserver } from 'mobx-react-lite'
 
 import userStore from '../../../utils/useState'
 
+import {Button} from 'antd-mobile'
 
 
 const  Home: React.FC = () => {
@@ -22,7 +23,7 @@ const  Home: React.FC = () => {
             })
        })
      }
-      
+     <Button icon="check-circle-o" inline size="small">with icon and inline</Button>
     </div>
   );
 }
