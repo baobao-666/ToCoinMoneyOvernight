@@ -5,7 +5,7 @@ import {useObserver} from 'mobx-react-lite'
 import './index.css'
 
 const page = 4;
-const size = 5;
+const size = 20;
 const  Special: React.FC = () => {
   let store = useStore();
   let {Special} = store;
@@ -21,6 +21,7 @@ const  Special: React.FC = () => {
                   <div>{item.title}</div>
                   <div>{item.subtitle}</div>
                   <p>{item.price_info}元起</p>
+                  <div></div>
             </div>
           })
         }
