@@ -11,9 +11,5 @@ export default class CreateStore{
     list:specialType[]=[];
 
     
-    @action
-    async getSpecialData(list:specialType[]){
-        let res =await getSpecialData(list);
-        this.list = res;
-    }
+   
 }

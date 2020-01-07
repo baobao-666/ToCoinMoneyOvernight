@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App/App';
 import * as Router from "react-router-dom"
-
 import StoreContext  from  './context/index'
 import store from './store/index'
-
+import 'px2rem-loader/lib/px2rem-loader'
 ReactDOM.render( 
                <StoreContext.Provider value={store} >
                     <Router.BrowserRouter> 
