@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './indexs.css'
+import './css/index.scss'
 import useStore from '../../../utils/useState'
 import { useObserver } from 'mobx-react-lite'
 const ShoppCart: React.FC = () => {
@@ -26,10 +26,14 @@ const ShoppCart: React.FC = () => {
       </div>
       
       {
-        ShoppCart.list.map((item, index) => {
 
-        })
-      }
+ShoppCart.list.map((item, index) => {
+
+})
+}
+    
+      
+     
       <div className='foot'>
        
       <span>
