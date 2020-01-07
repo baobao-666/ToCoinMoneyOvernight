@@ -11,7 +11,8 @@ export default class CreateStore{
 
     @action
     async getShop(){
-        let res=await getShop()
+        let res:any=await getShop();
+        this.list=res.cartList
         console.log(res)
     }
 }

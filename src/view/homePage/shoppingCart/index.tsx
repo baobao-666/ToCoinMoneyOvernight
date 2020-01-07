@@ -24,14 +24,37 @@ const ShoppCart: React.FC = () => {
           <span>满88元免邮费</span>
         </p>
       </div>
-      
-      {
-        ShoppCart.list.map((item, index) => {
+    
 
-        })
+        <div className='count' >
+        {
+          ShoppCart.list.map((item, index) => {
+            return <div className='list' key={index}>
+              <div className='ck'>
+              <input type="checkbox" name="" id=""/>
+              </div>
+               <div className='lefts'>
+                 <img src={item.list_pic_url} alt=""/>
+               </div>
+               <div className='center' key={index}>
+          <div>{item.goods_name}</div>
+                  <div></div>
+          <div>￥{item.retail_price}</div>
+
+               </div>
+               <div className='rights'>
+              
+               </div>
+             </div>
+         })
       }
+        </div>
+      
+      
       <div className='foot'>
-       
+      <div className='ck'>
+              <input type="checkbox" name="" id=""/>
+              </div>
       <span>
            已选(0) ￥0 
          </span>
@@ -54,12 +77,12 @@ const ShoppCart: React.FC = () => {
 // <div className='lefts'>
 // <img src="http://yanxuan.nosdn.127.net/8392725765cdd57fdae3f173877f4bda.png" alt=""/>
 // </div>
-// <div className='center'>
+// <div className='lefts'>
 // <div>星云酥 180克/3颗</div>
 // <div></div>
 // <div>￥26</div>
 // </div>
-// <div className='rights'>
+// <div className='lefts'>
 // <div>x19</div>
 // </div>
 //       </div>
