@@ -2,5 +2,6 @@ export interface classfiyType{
     id:any,
     categoryList:any,
     name:string,
-    item:any
+    item:any,
 }
+// export in
