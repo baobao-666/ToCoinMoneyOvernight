@@ -20,6 +20,7 @@ export default class CreateStore{
         this.list = res.data;
         console.log(res.data,'data');
     }
+    @action
     async getSpecialDetailDate(obj:Object){
         const res:any =await getSpecialDetailDate(obj);
         console.log(res);

@@ -4,15 +4,16 @@ import useStore from '../../utils/useState'
 // import {Location} from 'location'
 interface detailType{
     location:Location,
+    state:Number
 }
 const Detail:React.FC<detailType> =(props)=>{
-    const id = props.location.state;
+    // const id = props.location.state;
     const store = useStore();
     const {Special} = store;
     useEffect(()=>{
-        console.log(id,'id');
+        // console.log(id,'id');
         
-        Special.getSpecialDetailDate({id})
+        // Special.getSpecialDetailDate({id})
     })
     
     return useObserver(()=>(
