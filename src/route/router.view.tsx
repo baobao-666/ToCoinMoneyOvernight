@@ -10,13 +10,13 @@ const IRouterView=({routes}:IRouterConfig)=>{
             //   判断是路由还是重定向
               if(item.type==='route'){
                 //   创建路由组件标签
-                  const Com=item.component;
+                  const Com = item.component;
                 //   渲染路由
                   return <Router.Route key={index}  path={item.path} render={
                     //   render渲染路由标签
                       (props:Router.RouteProps)=>{
                         //   判断有没有后代路由
-                        const readireChildren:IRouterConfig =item.children;
+                        const readireChildren : IRouterConfig = item.children;
                         if(readireChildren){
                             // 有后代
                             return <Com {...props} routes={readireChildren} ></Com>
