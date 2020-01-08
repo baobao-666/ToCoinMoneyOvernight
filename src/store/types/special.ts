@@ -5,5 +5,6 @@ export interface specialType{
     title:string,
     subtitle:string,
     price_info:number,
-    id:number
+    id:number,
+    state:number
 }

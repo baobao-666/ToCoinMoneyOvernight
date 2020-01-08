@@ -4,6 +4,7 @@ import { IRouterItem } from './index.d'
 // 一级路由
 import HomePage from '../view/homePage/index'
 import LoginPage from '../view/login/index';
+import Detail from '../view/detail/index'
 
 // 二级路由
 import HomeCode from '../view/homePage/home/index'
@@ -65,6 +66,11 @@ const RouterConfig:IRouterItem[]=[
             to:"/homepage/home"
            }
     ]
+   },
+   {
+    type:'route',
+    path:'/detail',
+    component:Detail
    },
    {
     type:"route",
