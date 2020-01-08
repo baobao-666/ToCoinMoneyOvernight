@@ -9,6 +9,7 @@ export default class CreateStore{
 
    @observable
    list:any={} //全部数据
+
    @observable
    itemKey: string[] = [] //键的集合
 
@@ -19,10 +20,12 @@ export default class CreateStore{
     console.log('====================================');
     console.log(res);
     console.log('====================================');
-       this.list = res
-       this.itemKey = Object.keys(res)
+    if(res){
+      this.list = res
+      this.itemKey = Object.keys(res)
+    }
    }
-
+   @action
    async userlogin(params:object){
       const res:any = await userlogin(params)
       if(res.errno===0){

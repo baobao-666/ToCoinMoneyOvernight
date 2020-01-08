@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import style from './css/index.module.css'
 
-import Alert from '../../components/login/alert'
 
 import userStore from '../../utils/useState'
 import {useObserver} from 'mobx-react-lite'
 
 import { History } from 'history'
+
+import { Toast } from 'antd-mobile'
 
 interface Types {
       history:History
@@ -18,26 +19,23 @@ const  LoginPage: React.FC<Types> = (props) => {
  
    const [phone, setPhone] = useState("15323807318")
    const [pass, setPass] = useState("123456")
-   const [flag,setFlag]=useState(true)
-   const [title,setTitle]=useState("")
  
 
    const Login = () => {
         
            if(!/^1[3456789]\d{9}$/.test(phone)){
-             setFlag(false)
-             setTitle("手机号输入错误")
+             Toast.fail('手机号码错误', 1);
              return
-           }
-           if(!/\d{6}$/.test(pass)){
-            setFlag(false)
-            setTitle("密码输入错误")
+            }
+            if(!/\d{6}$/.test(pass)){
+              Toast.fail('密码错误', 1);
             return
            }
            Home.userlogin({
               mobile:phone,
               password:pass
            }).then(res=>{
+             Toast.success('登录成功', 1);
              props.history.push('/homepage/home')
            })
    }
@@ -57,7 +55,6 @@ const  LoginPage: React.FC<Types> = (props) => {
                   <span>登录</span>
             </div>
         </div>
-        <Alert flag={flag} title={title} ></Alert>
     </div>
   )
   )
