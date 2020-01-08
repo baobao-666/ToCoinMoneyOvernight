@@ -19,6 +19,10 @@ import BrandListCode from '../../../components/home/brandListCode/index'
 // 热门商品
 import HotGoodsCode from '../../../components/home/hotGood/index'
 
+// 带间距轮播
+
+import BannerTwo from '../../../components/home/banner2/index'
+
 
 const  Home: React.FC = () => {
 
@@ -36,9 +40,10 @@ const  Home: React.FC = () => {
     <div className={style.home_wrap}> 
        <Banner Bannerlist = { Home.BannerList }></Banner>
        <NavCode NavList = { Home.NavList }  ></NavCode>
-       <BrandListCode title={'品牌制造商提供'} brandList = { Home.brandList } ></BrandListCode>
-       <NewListCode title = {'新品首发'} newGoodsList = { Home.newGoodsList }  ></NewListCode>
-       <HotGoodsCode title = {'人气推荐'} hotGoodsList = { Home.hotGoodsList } ></HotGoodsCode>
+       <BrandListCode title={ '品牌制造商提供' } brandList = { Home.brandList } ></BrandListCode>
+       <NewListCode title = { '新品首发' } newGoodsList = { Home.newGoodsList }  ></NewListCode>
+       <HotGoodsCode title = { '人气推荐' } hotGoodsList = { Home.hotGoodsList } ></HotGoodsCode>
+       <BannerTwo title = { '专题精选' } topicList = { Home.topicList} ></BannerTwo>
     </div>
    )
   );

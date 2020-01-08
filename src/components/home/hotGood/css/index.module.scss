@@ -22,9 +22,23 @@
       }
       .mess{
           flex: 1;
-          padding: pxToRem(20px) 0  0 pxToRem(20px);
+          padding: pxToRem(20px) 0  0 pxToRem(10px);
           .titles{
               width: 100%;
+              font-size: pxToRem(14px);
+              line-height: pxToRem(30px);
+          }
+          .ls,
+          .price{
+              width: 100%;
+              font-size: pxToRem(12px);
+              line-height: pxToRem(30px);
+          }
+          .ls{
+              color: #666;
+          }
+          .price{
+              color:#9a0000;
           }
       }
   }

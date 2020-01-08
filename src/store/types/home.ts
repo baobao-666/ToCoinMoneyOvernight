@@ -78,3 +78,28 @@ export interface hotGoodsItemType {
     goods_brief: string
 }
 
+// 间距轮播图数据
+
+export interface  topicListType {
+    topicList: topicItemType[]
+    title?:string
+}
+
+
+export interface  topicItemType {
+    id: number
+    title: string
+    content: string
+    avatar: string
+    item_pic_url: string
+    subtitle: string
+    topic_category_id: number
+    price_info: number
+    read_count: string
+    scene_pic_url: string
+    topic_template_id: number
+    topic_tag_id: number
+    sort_order: number
+    is_show: number
+}
+

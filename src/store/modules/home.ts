@@ -4,7 +4,7 @@ import {observable, action} from 'mobx'
 
 import { getHomeData, userlogin }  from '../../api/home'
 
-import { ItemType, NavItem, newGoodsItemType, brandItemType, hotGoodsItemType } from '../types/home'
+import { ItemType, NavItem, newGoodsItemType, brandItemType, hotGoodsItemType, topicItemType } from '../types/home'
 export default class CreateStore{
 
 
@@ -29,6 +29,8 @@ export default class CreateStore{
    @observable
    hotGoodsList: hotGoodsItemType[] = []
 
+   @observable
+   topicList: topicItemType[] = []
    @action
     async getHomeData(){
     const res:any = await getHomeData()
@@ -43,6 +45,7 @@ export default class CreateStore{
       this.newGoodsList = this.list[this.itemKey[2]]
       this.brandList = this.list[this.itemKey[4]]
       this.hotGoodsList = this.list[this.itemKey[3]]
+      this.topicList = this.list[this.itemKey[5]]
     }
    }
    @action //登录接口返回token存入本地

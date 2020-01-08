@@ -24,11 +24,28 @@
 
 .list .mess {
   flex: 1;
-  padding: 0.53333rem 0 0 0.53333rem;
+  padding: 0.53333rem 0 0 0.26667rem;
 }
 
 .list .mess .titles {
   width: 100%;
+  font-size: 0.37333rem;
+  line-height: 0.8rem;
+}
+
+.list .mess .ls,
+.list .mess .price {
+  width: 100%;
+  font-size: 0.32rem;
+  line-height: 0.8rem;
+}
+
+.list .mess .ls {
+  color: #666;
+}
+
+.list .mess .price {
+  color: #9a0000;
 }
 
 .title {

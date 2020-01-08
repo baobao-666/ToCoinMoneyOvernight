@@ -1,0 +1,17 @@
+ @function pxToRem($px) {
+   @return $px / 37.5px * 1rem;
+ }
+ .space_carousel {
+    overflow: hidden;
+  }
+ .wrap{
+    background: #fff;
+    margin-top: pxToRem(10px);
+ }
+ .title{
+     width: 100%;
+     line-height: pxToRem(50px);
+     text-align: center;
+     font-size: pxToRem(16px);
+     font-weight: bold;
+ }

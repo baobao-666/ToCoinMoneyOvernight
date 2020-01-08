@@ -1,0 +1,16 @@
+.space_carousel {
+  overflow: hidden;
+}
+
+.wrap {
+  background: #fff;
+  margin-top: 0.26667rem;
+}
+
+.title {
+  width: 100%;
+  line-height: 1.33333rem;
+  text-align: center;
+  font-size: 0.42667rem;
+  font-weight: bold;
+}
