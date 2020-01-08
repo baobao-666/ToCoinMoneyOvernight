@@ -8,9 +8,14 @@ const ClassFiy: React.FC = () => {
 
       let store = useStore();
       let { ClassFiy } = store;
+
       useEffect(() => {
             ClassFiy.getFendate()
       },[ClassFiy])
+      
+      let Cli = (ele:number) => {
+            ClassFiy.current=ele;
+      }
       return useObserver(()=> (
             <div className="classfiy-wrap">
                   <div className="searchWrap">
@@ -22,13 +27,18 @@ const ClassFiy: React.FC = () => {
                   <div className="categogContet">
                         <div className="leftContent">
                               {
-
                                  ClassFiy.list &&  ClassFiy.list.map((item,index)=>{
-                                 return <span key={index}>{item.name}</span>
+                                 return <div key={index} className="tabItem" onClick={()=>{Cli(index)}}>{item.name}</div>
                                  })   
                               }
                         </div>
-                        <div className="rightContent"></div>
+                        <div className="rightContent">
+                              {
+                                    // ClassFiy.list[ClassFiy.current]&& ClassFiy.list[current].subCategoryList.map((item:any,index:number)=>{
+                                    // return <div key={index}>{item}</div>
+                                    // })
+                              }
+                        </div>
                   </div>
             </div>
       ));
