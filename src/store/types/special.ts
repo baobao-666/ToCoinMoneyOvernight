@@ -4,5 +4,7 @@ export interface specialType{
     scene_pic_url:string,
     title:string,
     subtitle:string,
-    price_info:number
+    price_info:number,
+    id:number,
+    state:number
 }
