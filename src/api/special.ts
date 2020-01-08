@@ -6,6 +6,14 @@ export let getSpecialData = (params: any)=>{
 }
     // 专题详情
 export let getSpecialDetailDate = (params: any)=>{
-    return  request.get('/topic/detail',{id:params.id})
+    
+    return  request.get('/topic/detail',{id:params.id});
+}
+
+    // 专题评论
+export let getCommentData = (params: any)=>{
+    console.log(params);
+    
+    return  request.get('/comment/list',params);
 }
 

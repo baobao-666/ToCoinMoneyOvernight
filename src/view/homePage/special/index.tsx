@@ -2,7 +2,7 @@
 import React,{useEffect} from 'react';
 import useStore  from '../../../utils/useState'
 import {useObserver} from 'mobx-react-lite'
-import './index.css'
+import './css/index.css'
 import {History} from 'history'
 interface topicType{
   history:History
@@ -16,10 +16,8 @@ const  Special: React.FC<topicType> = (props) => {
     Special.getSpecialData({page,size})
   },[Special]);
 
-  let changeDetail= (id:number)=>{  // 😍
+  let changeDetail= (id:number)=>{  
     props.history.push('/detail',id);
-    console.log(props);
-    
   }
   return useObserver(()=>(
     <div className="specai-wrap">

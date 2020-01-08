@@ -6,5 +6,9 @@ export interface specialType{
     subtitle:string,
     price_info:number,
     id:number,
-    state:number
+    state:number,
+    content:string,
+    avatar:string,
+    user_info:any,
+    username:string
 }
