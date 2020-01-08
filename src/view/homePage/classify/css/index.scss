@@ -33,24 +33,97 @@
 }
 .categogContet{
     flex: 1;
+    overflow: hidden;
     display: flex;
+    justify-content: space-between;
 }
 .categogContet .leftContent{
     flex: 3;
     width: 100%;
+    height: 100%;
     background:#fff;
     border-right: pxToRem(1px) solid #ccc;
-    .tabItem{
+    overflow: hidden;
+    border-left:none;
+    &>div{
         height: pxToRem(43px);
-        font-size: pxToRem(14px);
+        font-size: pxToRem(12px);
         width: 100%;
         line-height: pxToRem(43px);
         text-align: center;
-        margin-left: pxToRem(2px);
-        border-bottom:pxToRem(1px) solid #ccc;
+        padding-left: pxToRem(2px);
+        border-left:2px solid #fff;
+    }
+    .active{
+        border-left:pxToRem(2px) solid #2196f3;
+        color:#2196f3;
     }
 }
 .categogContet .rightContent{
     flex: 7;
-    overflow-y: scroll;
+    overflow: auto;
+    .categoryWrap{
+        .categoryLogo{ 
+            width: 100%;
+            height: pxToRem(100px);
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;   
+            }
+            &>div{
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                color:#fff;
+                font-size: pxToRem(14px);
+            }
+        }
+        .categoryTitle{
+            height: pxToRem(25px);
+            font-size: pxToRem(12px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:pxToRem(10px) 0;
+            .line{
+                width: pxToRem(30px);
+                height: pxToRem(1.7px);
+                background:#2196f3;
+                border-radius: pxToRem(13px);
+            }
+            .text{
+                font-size: pxToRem(14px);
+                margin:0 pxToRem(5px);
+                color:#2196f3;
+            }
+        }
+        .subCategory{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            a{
+                width: 45%;
+                height: pxToRem(130px);
+                padding:pxToRem(5px);
+                background: transparent;
+                text-decoration: none;
+                outline: none;
+                margin-bottom: pxToRem(5px);
+                img{
+                    width: 100%;
+                    padding: pxToRem(5px);
+                    height: auto;
+                }
+                .subCategoryItemName{
+                    font-size: pxToRem(12px);
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
 }
