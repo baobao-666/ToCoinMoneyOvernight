@@ -2,12 +2,15 @@ import React, { useEffect } from 'react';
 import './indexs.scss'
 import useStore from '../../../utils/useState'
 import { useObserver } from 'mobx-react-lite'
+import Special from '../special/index';
 const ShoppCart: React.FC = () => {
   let store = useStore()
   let { ShoppCart } = store;
   useEffect(() => {
-    ShoppCart.getShop()
-  }, [ShoppCart])
+    ShoppCart.getShop();
+   
+  }, [ShoppCart]);
+  
   return useObserver(() => (
     <div className='cart-wrap'>
       <div className='header'>
