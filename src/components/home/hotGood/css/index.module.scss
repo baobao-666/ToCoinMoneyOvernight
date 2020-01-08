@@ -1,0 +1,36 @@
+  @function pxToRem($px) {
+    @return $px / 37.5px * 1rem;
+  }
+  .wrap{
+      padding:0 pxToRem(10px) ;
+      background: #fff;
+      margin-top: pxToRem(10px);
+  }
+  .list{
+      width: 100%;
+      border-top: pxToRem(1px) solid #ccc;
+      display: flex;
+      .logo{
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .img{
+             width: 90%;
+             height: 90%;
+           }
+      }
+      .mess{
+          flex: 1;
+          padding: pxToRem(20px) 0  0 pxToRem(20px);
+          .titles{
+              width: 100%;
+          }
+      }
+  }
+  .title{
+      line-height: pxToRem(50px);
+      font-size: pxToRem(14px);
+      text-align: center;
+      font-weight: bold;
+  }
