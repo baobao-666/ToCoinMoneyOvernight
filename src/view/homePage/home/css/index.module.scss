@@ -1,0 +1,11 @@
+  @function pxToRem($px) {
+    @return $px / 37.5px * 1rem;
+  }
+  .home_wrap{
+      width: 100%;
+      background: #eee;
+  }
+ 
+
+
+

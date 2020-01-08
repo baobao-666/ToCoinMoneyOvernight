@@ -1,0 +1,27 @@
+  @function pxToRem($px) {
+    @return $px / 37.5px * 1rem;
+  }
+  .nav_wrap{
+      width: 100%;
+      height: pxToRem(70px);
+      display: flex;
+      overflow: hidden;
+      background: #fff;
+  }
+  .item{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .logo{
+          width: 35%;
+          img{
+              width: 100%;
+          }
+      }
+      .text{
+          margin-top: pxToRem(5px);
+          font-size: pxToRem(10px);
+      }
+  }
