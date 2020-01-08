@@ -1,24 +1,47 @@
-import React from 'react';
-import './index.css'
+import React, {useState, useEffect } from 'react';
+import './css/index.css'
+import {useObserver } from 'mobx-react-lite'
+
+import useStore from '../../../utils/useState'
 
 const ClassFiy: React.FC = () => {
-  return (
-    <div className="classfiy-wrap">
 
-      <input type="text" placeholder='搜索商品，共239款好物' />
-      <div className='count'>
-        <div className='left'>
-          <p>1</p>
-          
-        </div>
-        <div className='right'>
-          <div>2</div>
-          
-        </div>
-      </div>
+      let store = useStore();
+      let { ClassFiy } = store;
 
-    </div>
-  );
+      useEffect(() => {
+            ClassFiy.getFendate()
+      },[ClassFiy])
+      
+      let Cli = (ele:number) => {
+            ClassFiy.current=ele;
+      }
+      return useObserver(()=> (
+            <div className="classfiy-wrap">
+                  <div className="searchWrap">
+                        <div className="searchInput">
+                              <i></i>
+                              <span>搜索商品，共239款好物</span>
+                        </div>
+                  </div>
+                  <div className="categogContet">
+                        <div className="leftContent">
+                              {
+                                 ClassFiy.list &&  ClassFiy.list.map((item,index)=>{
+                                 return <div key={index} className="tabItem" onClick={()=>{Cli(index)}}>{item.name}</div>
+                                 })   
+                              }
+                        </div>
+                        <div className="rightContent">
+                              {
+                                    // ClassFiy.list[ClassFiy.current]&& ClassFiy.list[current].subCategoryList.map((item:any,index:number)=>{
+                                    // return <div key={index}>{item}</div>
+                                    // })
+                              }
+                        </div>
+                  </div>
+            </div>
+      ));
 }
 
 export default ClassFiy;

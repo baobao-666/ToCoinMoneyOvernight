@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/index.css'
+import './scss/index.css'
 
 const  My: React.FC = () => {
   return (

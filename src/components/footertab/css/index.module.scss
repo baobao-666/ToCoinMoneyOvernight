@@ -1,0 +1,30 @@
+
+@function pxToRem($px) {
+  @return $px / 37.5px * 1rem;
+}
+.footer_wrap {
+    width: 100%;
+    height: pxToRem(50px);
+    border-top: pxToRem(1px) solid;
+    display: flex;
+  }
+  .footer_wrap > .a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: pxToRem(10px);
+      color: black;
+      
+    }
+  .footer_wrap > .a > i{
+    font-size: pxToRem(14px);
+    text-align: center;
+    line-height: pxToRem(25px);
+  }
+  
+  .footer_wrap > .active{
+    color: #54aef6;
+  }
+  
