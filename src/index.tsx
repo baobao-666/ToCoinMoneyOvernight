@@ -4,14 +4,15 @@ import './index.css';
 import App from './App/App';
 import * as Router from "react-router-dom"
 import './config/rem'
-import StoreContext from './context/index'
+import 'antd-mobile/dist/antd-mobile.css'
+
+import StoreContext  from  './context/index'
 import store from './store/index'
 
-ReactDOM.render(
-      <StoreContext.Provider value={store} >
-            <Router.BrowserRouter>
-                  <App />
-            </Router.BrowserRouter>
-      </StoreContext.Provider>
-
-      , document.getElementById('root'));
+ReactDOM.render( 
+               <StoreContext.Provider value={store} >
+                    <Router.BrowserRouter> 
+                          <App /> 
+                    </Router.BrowserRouter>
+               </StoreContext.Provider>               
+                                         , document.getElementById('root'));
