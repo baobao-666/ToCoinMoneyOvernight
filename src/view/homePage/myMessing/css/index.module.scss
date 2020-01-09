@@ -45,7 +45,15 @@
     flex-wrap: wrap;
     justify-content: space-between; 
 }
-.my_wrap .userPower .item{
+.a{
+    i{
+        color: #2196f3;
+    }
+    .title{
+        color: #2196f3;
+    }
+}
+.my_wrap .userPower .item,.a{
     width: 33%;
     height: pxToRem(138px);
     display: flex;
@@ -53,9 +61,17 @@
     justify-content: center;
     align-items: center;
     background:#fff;
-    color:#108ee9;
     margin-bottom: pxToRem(2px);
     font-size: pxToRem(16px);
+    color: #666;
+    .i{
+        font-size: pxToRem(30px);
+    }
+    .title{
+        font-size: pxToRem(16px);
+        margin-top: pxToRem(15px);
+        text-align: center;
+    }
 }
 .my_wrap .loginOut{
     width: 100%;

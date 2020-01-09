@@ -1,3 +1,4 @@
+
 // 轮播图泛型
 export interface ItemType {
     id: number,
@@ -9,9 +10,6 @@ export interface ItemType {
     content: string,
     end_time: number,
     enabled: number,
-   
-    
-    
 }
 
 export interface Type {
