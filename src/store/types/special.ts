@@ -10,5 +10,6 @@ export interface specialType{
     content:string,
     avatar:string,
     user_info:any,
-    username:string
+    username:string,
+    add_time:string
 }

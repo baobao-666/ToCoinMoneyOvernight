@@ -3,9 +3,10 @@ import {specialType} from '../types/special'
 // 引入mobx
 import {observable,action} from 'mobx'
 import {
-    getSpecialData,  // 专题数据
+    getSpecialData,         // 专题数据
     getSpecialDetailDate,   // 专题详情
-    getCommentData          // 专题评论
+    getCommentData,         // 专题评论
+    getRelatedDate          // 推荐专题
 } from '../../api/special'
 
 
@@ -19,6 +20,9 @@ export default class CreateStore{
 
     @observable
     commentData:specialType[]=[]  //评论数据
+
+    @observable
+    relatedDate:specialType[]=[]  //推荐专题数据
 
     @action
     async getSpecialData(obj:object){
@@ -38,9 +42,17 @@ export default class CreateStore{
     async getCommentData(obj:Object){
         const res:any =await getCommentData(obj);
         this.commentData=res.data;
-        console.log(res.data,'评论');
-        
+        console.log(res.data,'评论'); 
     }
+
+    @action
+    async getRelatedDate(obj:Object){
+        const res:any =await getRelatedDate(obj);
+        this.relatedDate=res;
+        console.log(res,'相关'); 
+    }
+
+    
      
 
 }
