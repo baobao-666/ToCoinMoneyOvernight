@@ -5,13 +5,10 @@ import style from './css/index.module.css'
 import userStore from '../../utils/useState'
 import {useObserver} from 'mobx-react-lite'
 
-import { History } from 'history'
 
 import { Toast } from 'antd-mobile'
 
-interface Types {
-      history:History
-}
+import { Types } from '../../store/types/login'
 
 const  LoginPage: React.FC<Types> = (props) => {
    let store = userStore();

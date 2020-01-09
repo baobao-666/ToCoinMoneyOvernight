@@ -41,7 +41,15 @@
   justify-content: space-between;
 }
 
-.my_wrap .userPower .item {
+.a i {
+  color: #2196f3;
+}
+
+.a .title {
+  color: #2196f3;
+}
+
+.my_wrap .userPower .item, .a {
   width: 33%;
   height: 3.68rem;
   display: flex;
@@ -49,9 +57,19 @@
   justify-content: center;
   align-items: center;
   background: #fff;
-  color: #108ee9;
   margin-bottom: 0.05333rem;
   font-size: 0.42667rem;
+  color: #666;
+}
+
+.my_wrap .userPower .item .i, .a .i {
+  font-size: 0.8rem;
+}
+
+.my_wrap .userPower .item .title, .a .title {
+  font-size: 0.42667rem;
+  margin-top: 0.4rem;
+  text-align: center;
 }
 
 .my_wrap .loginOut {
