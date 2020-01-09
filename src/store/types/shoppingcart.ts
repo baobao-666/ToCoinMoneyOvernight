@@ -3,7 +3,14 @@ export interface shopCartType{
     goods_name:string,
     retail_price:number,
     number:number,
-    goodsCount?:number,
-    cartTotal:string,
-    total:Object
+    id:number,
+    name:string,
+    goods_brief:string,
+   
+ 
+   
 }
+
+
+
+

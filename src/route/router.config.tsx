@@ -5,6 +5,7 @@ import { IRouterItem } from './index.d'
 import HomePage from '../view/homePage/index'
 import LoginPage from '../view/login/index';
 import Detail from '../view/detail/index'
+import Particular from '../view/particular/particular'
 
 // 二级路由
 import HomeCode from '../view/homePage/home/index'
@@ -78,11 +79,17 @@ const RouterConfig:IRouterItem[]=[
     component:LoginPage,
     children:[]
    },
+   {
+       type:'route',
+       path:'/particular',
+       component:Particular
+   },
     {
      type:"redirect",
      from:"/",
      to:"/homepage"
-    }
+    },
+   
 ]
 
 export default RouterConfig

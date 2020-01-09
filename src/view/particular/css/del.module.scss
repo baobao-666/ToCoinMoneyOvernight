@@ -1,0 +1,92 @@
+.noTabPageContent{
+    width: 100%;
+    height: 100%;
+    // background: #f5f5f5;
+   
+}
+
+.headers{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+
+
+}
+.banner{
+    width: 100%;
+    height: 150px;
+    background: #f5f5f9;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #666666;
+    background: #f4f4f4;
+
+}
+.name{
+    padding: 30px;
+    background: white;
+    margin-top: 5px;
+
+}
+.name .goodsNameTitle{
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 7px
+
+  
+}
+.name .goodsNameSubTitle{
+    font-size: 13px;
+    color: #444;
+    text-align: center;
+    padding-bottom: 15px;
+   
+}
+.name .goodsPriceTitle{
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    line-height: 15px;
+}
+.goodsSize{
+    margin-top: 3px;
+    height: 43px;
+    padding: 0 13px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goodsSize div:nth-child(1) {
+    flex: 1 1;
+    text-align: left;
+    color: #2196f3;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+ .goodsSize div:nth-child(2) {
+    width: auto;
+    padding: 0 12px;
+    text-align: right;
+    color: red;
+    font-weight: bolder;
+    font-size: 13px;
+}
+ .goodsSize div:nth-child(3) {
+    width: auto;
+    padding: 0 10px;
+    text-align: right;
+    font-size: 14px;
+}
+
