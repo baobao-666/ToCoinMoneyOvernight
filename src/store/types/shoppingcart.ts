@@ -1,6 +1,4 @@
 
-import { specialType } from './special';
-
 export interface shopCartType{
     list_pic_url:string,
     goods_name:string,
