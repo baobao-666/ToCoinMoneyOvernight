@@ -107,19 +107,14 @@ export interface  topicItemType {
 
 // categoryList 数据
 
-export interface categoryListType {
-    categoryList: any[]
-    categoryItem: any[]
-
-}
 
 export interface categoryItemType {
-    id: number
-    name: string
+    id?: number
+    name?: string
     goodsList: goodsListType[]
 }
 
-export interface  goodsListType {
+export interface goodsListType {
     id: number
     name: string
     list_pic_url: string

@@ -4,7 +4,7 @@ import {observable, action} from 'mobx'
 
 import { getHomeData, userlogin }  from '../../api/home'
 
-import { ItemType, NavItem, newGoodsItemType, brandItemType, hotGoodsItemType, topicItemType,  categoryListType, categoryItemType } from '../types/home'
+import { ItemType, NavItem, newGoodsItemType, brandItemType, hotGoodsItemType, topicItemType, categoryItemType } from '../types/home'
 export default class CreateStore{
 
 
@@ -33,10 +33,7 @@ export default class CreateStore{
    topicList: topicItemType[] = []
 
    @observable
-   categoryList: categoryListType[] = []
-
-   @observable
-   categoryItem: categoryItemType[] = []
+   categoryList: categoryItemType[] = []
 
    @action
     async getHomeData(){

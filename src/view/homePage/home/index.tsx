@@ -5,8 +5,6 @@ import userStore from '../../../utils/useState'
 
 import style from './css/index.module.css'
 
-import { categoryListType } from '../../../store/types/home'
-
 // 轮播组件
 import Banner from '../../../components/home/banner/index'
 // 导航组件
@@ -26,6 +24,7 @@ import BannerTwo from '../../../components/home/banner2/index'
 
 // 家具种类 categoryList
 import CategoryCode from '../../../components/home/cateCode/index'
+import { categoryItemType } from '../../../store/types/home';
 
 const  Home: React.FC = () => {
 
@@ -37,8 +36,6 @@ const  Home: React.FC = () => {
     Home.getHomeData()
   },[])
 
-  
-  
   return useObserver(()=>( 
     <div className={style.home_wrap}> 
        <Banner Bannerlist = { Home.BannerList }></Banner>
@@ -48,8 +45,8 @@ const  Home: React.FC = () => {
        <HotGoodsCode title = { '人气推荐' } hotGoodsList = { Home.hotGoodsList } ></HotGoodsCode>
        <BannerTwo title = { '专题精选' } topicList = { Home.topicList} ></BannerTwo>
        {
-         Home.categoryList.map((item:categoryListType,index:number)=>{
-           return  <CategoryCode key = { index }  categoryItem = { item }  ></CategoryCode>
+         Home.categoryList.map((item:categoryItemType ,index)=>{
+           return  <CategoryCode key = { index } id={item.id} name = { item.name } goodsList ={ item.goodsList }  ></CategoryCode>
          })
        }
     </div>

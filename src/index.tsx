@@ -11,8 +11,10 @@ import store from './store/index'
 
 ReactDOM.render( 
                <StoreContext.Provider value={store} >
-                    <Router.BrowserRouter> 
-                          <App /> 
-                    </Router.BrowserRouter>
+                     <React.Suspense fallback = { <div> login.... </div> } >
+                         <Router.BrowserRouter> 
+                            <App /> 
+                         </Router.BrowserRouter>
+                     </React.Suspense>
                </StoreContext.Provider>               
                                          , document.getElementById('root'));

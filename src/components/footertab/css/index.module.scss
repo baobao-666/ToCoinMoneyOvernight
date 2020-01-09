@@ -5,7 +5,7 @@
 .footer_wrap {
     width: 100%;
     height: pxToRem(50px);
-    border-top: pxToRem(1px) solid;
+    box-shadow: 0px pxToRem(-5px) pxToRem(10px)rgba(0,0,0,0.3);
     display: flex;
   }
   .footer_wrap > .a {
