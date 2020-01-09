@@ -12,6 +12,10 @@ export interface shopCartType{
      goods_id:number,
     value:string,
     goods_desc:any,
+    counter_price:number,
+    count:number,
+    add_time:string,
+    content:string
  
     
    

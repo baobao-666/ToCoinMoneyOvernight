@@ -4,7 +4,7 @@ import useStore from '../../utils/useState'
 import style from './css/del.module.scss'
 import { History } from 'history'
  
-import Lunbolist from '../../components/lunbo/index';
+import Lunbolist from '../../components/swiper/index';
 interface detadetType {
     location: Location
     history: History
@@ -14,6 +14,7 @@ const Particular: React.FC<detadetType> = (props) => {
     let store = useStore()
     let { ShoppCart } = store
     // console.log(state)
+    
    useEffect(() => {
       let id=1009024
          ShoppCart.getDet({ id })
@@ -29,7 +30,7 @@ const Particular: React.FC<detadetType> = (props) => {
                 ShoppCart.det.map((item, index) => {
                     return <div className='noTabPageContent' key={index}>
                         <div className={style.headers}>
-                            <div className={style.left} onClick={() => goFn()}>&lt;</div>
+                            <div className={style.left } onClick={() => goFn()}></div>
                             <div className={style.title}>{item.name}</div>
                             <div className={style.right}></div>
                         </div>
@@ -37,7 +38,7 @@ const Particular: React.FC<detadetType> = (props) => {
                        
                         <div className={style.nav}>
                             <p>
-                                <i></i>
+                                <i ></i>
                                 <span>30天无忧退货</span>
                             </p>
                             <p>
@@ -62,7 +63,7 @@ const Particular: React.FC<detadetType> = (props) => {
                         </div>
                         <div className={style.goodsSize}>
                             <div></div>
-                            <div>x0</div>
+                <div>X{item.counter_price}</div>
                             <div>选择规格</div>
                         </div>
 
@@ -71,6 +72,37 @@ const Particular: React.FC<detadetType> = (props) => {
 
                 })
             }
+            {
+                ShoppCart.counts.map((items,i)=>{
+                return <div key={i} className={style.goodsComment}>
+                    <div className={style.goodsCommentTitle}>
+                        <div>评论({items.count})</div>
+                        <div>查看全部></div>
+                    </div>
+                    
+                </div>
+                })
+            }
+            {
+                ShoppCart.comment.map((item,index)=>{
+                    return <div key={index} className={style.commentList}>
+                        <div className={style.commentItem}>
+                            <div className={style.userInfo}>
+                <div>匿名用户</div>
+                <div>{item.add_time}</div>
+                            </div>
+                            <div className={style.userComment}>
+                                {item.content}
+                            </div>
+                            <div className={style.commentPicList}>
+                                
+                            </div>
+                        </div>
+                    </div>
+                })
+            }
+            
+          
             
             <div className={style.goodsAttribute} >
                 <div className={style.goodsAttributeLine}>—— 商品参数 ——</div>

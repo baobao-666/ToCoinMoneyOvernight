@@ -105,6 +105,59 @@
     text-align: right;
     font-size: 14px;
 }
+ .goodsComment {
+    margin-top: 10px;
+    background: white;
+}
+.goodsComment .goodsCommentTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0 10px;
+    border-bottom: 1px solid gainsboro;
+}
+.goodsComment .goodsCommentTitle div:nth-child(1) {
+    flex: 1 1;
+    text-align: left;
+    font-size: 16px;
+}
+.goodsComment .goodsCommentTitle div:nth-child(2) {
+    width: auto;
+    text-align: right;
+    font-size: 16px;
+}
+.commentList {
+    background: white;
+    padding: 10px;
+}
+.commentList .commentItem {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: white;
+    color: gray;
+    padding-bottom: 80px;
+}
+.commentList .commentItem .userInfo {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.commentList .commentItem .userInfo div:nth-child(1) {
+    flex: 1 1;
+    color: black;
+}
+.commentList .commentItem .userInfo div:nth-child(2) {
+    width: auto;
+}
+.commentList .commentItem .userComment {
+    line-height: 30px;
+    font-size:13px;
+}
  .goodsAttribute {
     margin-top: 10px;
     padding: 32px;

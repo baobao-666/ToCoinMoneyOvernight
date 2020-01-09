@@ -19,6 +19,8 @@ export default class CreateStore{
      Lunbolist:ItemTypes[]=[]
      @observable
      comment:shopCartType[]=[]
+      @observable
+      counts:shopCartType[]=[]
    
      
     
@@ -36,13 +38,16 @@ export default class CreateStore{
     this.data=res.issue
     this.Lunbolist=res.gallery
     this.attribute=res.attribute
-    this.comment=res.comment
+    this.comment=[res.comment.data]
+     this.counts=[res.comment.count]
     //  console.log(res.issue)
     //  console.log(res.info)
     //  console.log(res.gallery)
     //  console.log(res.attribute)
-     console.log(res)
+     console.log(res.comment.count)
+     console.log(res.comment.data)
      console.log(res.comment)
+     console.log(res)
 
     }
     
