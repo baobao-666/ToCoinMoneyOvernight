@@ -72,7 +72,7 @@ height: 25px;
     font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
-    /* text-overflow: ellipsis; */
+    
 }
 .center div:nth-child(3){
     color: red;
@@ -80,6 +80,7 @@ height: 25px;
 
 .rights{
     width: auto;
+    font-size: 14px;
 
 }
 
@@ -95,6 +96,7 @@ height: 25px;
 }
 .foot span{
     margin-right: 50px;
+    font-size: 14px;
 }
 .foot button{
     width: 120px;
