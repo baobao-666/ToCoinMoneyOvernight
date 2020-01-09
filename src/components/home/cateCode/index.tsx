@@ -1,8 +1,10 @@
 import React from 'react'
 
+import style from './css/index.module.css'
+
 const Code:React.FC<any> = (props) =>{
-       return <div>
-       组件
+       return <div className = { style.wrap } >
+       组件    
               </div>
 }
 
