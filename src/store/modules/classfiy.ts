@@ -1,6 +1,6 @@
 
 // 引入mobx
-import {observable,action,computed} from 'mobx'
+import {observable,action} from 'mobx'
 import { getFendate,getFendateId,getFendateNav} from '../../api/fen'
 import { observer } from 'mobx-react-lite';
 import { AsyncResource } from 'async_hooks';
@@ -38,7 +38,6 @@ export default class CreateStore{
         this.curName = res.currentCategory.name;
         this.curTit = res.currentCategory.front_name
         this.curUrl = res.currentCategory.wap_banner_url
-        console.log('curList......',res.currentCategory) 
     }
     @action
     async Cli(item:any,index:number){
@@ -50,11 +49,11 @@ export default class CreateStore{
         this.curIndex = index;
     }
 
-    @action
-    async Jump(item:any){
-        let res:any = await getFendateNav({id:item.id})
-        console.log("res****",res.brotherCategory)
-        this.funnyList=res.brotherCategory
-    }
+    // @action
+    // async Jump(item?:any){
+    //     let res:any = await getFendateNav(item.id)
+    //     console.log("res****",res.brotherCategory)
+    //     this.funnyList=res.brotherCategory
+    // }
   
 }

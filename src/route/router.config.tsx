@@ -8,6 +8,8 @@ const HomePage = React.lazy(() => import('../view/homePage/index') );
 const LoginPage = React.lazy(() => import('../view/login/index') );
 const Detail = React.lazy(() => import('../view/detail/index') );
 const Particular = React.lazy(() => import('../view/particular/particular') );
+const Categorys =  React.lazy(() => import('../view/categorys') ); 
+
 
 // 二级路由
 const HomeCode = React.lazy(() => import('../view/homePage/home/index') );
@@ -72,6 +74,11 @@ const RouterConfig:IRouterItem[]=[
     type:'route',
     path:'/detail',
     component:Detail
+   },
+   {
+    type:'route',
+    path:'/categorys',
+    component:Categorys
    },
    {
     type:"route",
