@@ -7,6 +7,7 @@ import { IRouterItem } from './index.d'
 const HomePage = React.lazy(() => import('../view/homePage/index') );
 const LoginPage = React.lazy(() => import('../view/login/index') );
 const Detail = React.lazy(() => import('../view/detail/index') );
+const CommentWrite = React.lazy(()=>import('../view/commentWrite/index'))
 const Particular = React.lazy(() => import('../view/particular/particular') );
 
 // 二级路由
@@ -72,6 +73,11 @@ const RouterConfig:IRouterItem[]=[
     type:'route',
     path:'/detail',
     component:Detail
+   },
+   {
+    type:'route',
+    path:'/commentWrite',
+    component:CommentWrite
    },
    {
     type:"route",
