@@ -2,39 +2,39 @@ import React, { useEffect } from 'react'
 import { useObserver } from 'mobx-react-lite'
 import useStore from '../../utils/useState'
 import style from './css/del.module.scss'
-import ShoppCart from '../homePage/shoppingCart/index';
-
-
-
+import { History } from 'history'
+ 
+import Lunbolist from '../../components/lunbo/index';
 interface detadetType {
     location: Location
+    history: History
 }
 const Particular: React.FC<detadetType> = (props) => {
+    // let {state}=props.location as {state?:any}
     let store = useStore()
     let { ShoppCart } = store
-
-
-
-    useEffect(() => {
-        let id = 1166008
-        ShoppCart.getDet({ id })
+    // console.log(state)
+   useEffect(() => {
+      let id=1009024
+         ShoppCart.getDet({ id })
 
     }, [ShoppCart])
+    let goFn = () => {
+        props.history.push('/homepage/shoppingCart')
+    }
 
     return useObserver(() => (
         <div className={style.noTabPageContent}>
-
             {
                 ShoppCart.det.map((item, index) => {
                     return <div className='noTabPageContent' key={index}>
-                        <div className='header'>
-                            <div className={style.left}>&lt;</div>
+                        <div className={style.headers}>
+                            <div className={style.left} onClick={() => goFn()}>&lt;</div>
                             <div className={style.title}>{item.name}</div>
                             <div className={style.right}></div>
                         </div>
-                        <div className={style.banner}>
-
-                        </div>
+                    <Lunbolist Lunbolist = {ShoppCart.Lunbolist}></Lunbolist>
+                       
                         <div className={style.nav}>
                             <p>
                                 <i></i>
@@ -65,16 +65,63 @@ const Particular: React.FC<detadetType> = (props) => {
                             <div>x0</div>
                             <div>选择规格</div>
                         </div>
-                        <div className={style.goodsAttribute}>
 
-                        </div>
+
                     </div>
 
                 })
             }
+            
+            <div className={style.goodsAttribute} >
+                <div className={style.goodsAttributeLine}>—— 商品参数 ——</div>
+                {
+                    ShoppCart.attribute.map((it, indexs) => {
+                        return <div className={style.goodsAttributeList} key={indexs}>
+                            <div className={style.goodsAttributeItem}>
+                                <div className={style.attributeLabel}>{it.name}</div>
+                                <div className={style.attributeContent}>{it.value}</div>
+                            </div>
+
+                        </div>
+                    })
+                }
+                {
+                    ShoppCart.det.map((item, index) => {
+                        return <div dangerouslySetInnerHTML={{ __html: item.goods_desc }} key={index} className={style.topicDetailImg}/>
+                    })
+                }
+
+
+            </div>
+            <div className={style.goodsAttributes}>
+
+                <div className={style.goodsAttributeLine}> —— 常见问题 ——</div>
+
+
+                {
+                    ShoppCart.data.map((ite, i) => {
+                        return <div className={style.problemWrap} key={i}>
+                            <div className={style.problemLabel}>
+                                <span>√</span>
+                                {ite.question}
+                            </div>
+                            <div className={style.problemContent}>
+                                {ite.answer}
+                            </div>
+                        </div>
+                    })
+                }
+                <div className={style.goodsPageDo}>
+                    <div className={style.isLike}></div>
+                    <div className={style.cartNum}></div>
+                    <div className={style.addCart}>加入购物车</div>
+                    <div className={style.payGoods}>立即购买</div>
+                </div>
+            </div>
 
 
         </div>
+
 
 
     ))
