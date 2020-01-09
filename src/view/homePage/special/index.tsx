@@ -16,7 +16,7 @@ const  Special: React.FC<topicType> = (props) => {
     Special.getSpecialData({page,size})
   },[Special]);
 
-  let changeDetail= (id:number)=>{  // 😍
+  let changeDetail= (id:number)=>{  // 
     props.history.push('/detail',id);
     console.log(props);
     

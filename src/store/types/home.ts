@@ -8,7 +8,9 @@ export interface ItemType {
     image_url: string,
     content: string,
     end_time: number,
-    enabled: number
+    enabled: number,
+    
+    
 }
 
 export interface Type {

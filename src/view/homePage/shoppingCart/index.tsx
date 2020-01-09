@@ -2,14 +2,21 @@ import React, { useEffect } from 'react';
 import './indexs.scss'
 import useStore from '../../../utils/useState'
 import { useObserver } from 'mobx-react-lite'
-import Special from '../special/index';
-const ShoppCart: React.FC = () => {
+import {History} from 'history'
+interface topicType{
+  history:History
+}
+const ShoppCart: React.FC<topicType> = (props) => {
   let store = useStore()
   let { ShoppCart } = store;
   useEffect(() => {
     ShoppCart.getShop();
+   
     
   }, [ShoppCart]);
+  let clickFn=(id:number)=>{
+    props.history.push('/particular',id)
+  }
   return useObserver(() => (
     <div className='cart-wrap'>
       <div className='header'>
@@ -36,7 +43,7 @@ const ShoppCart: React.FC = () => {
                 <input type="checkbox" name="" id="" />
               </div>
               <div className='lefts'>
-                <img src={item.list_pic_url} alt="" />
+                <img src={item.list_pic_url} alt="" onClick={()=>clickFn(item.id)}/>
               </div>
               <div className='center' key={index}>
                 <div>{item.goods_name}</div>
