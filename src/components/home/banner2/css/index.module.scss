@@ -15,3 +15,25 @@
      font-size: pxToRem(16px);
      font-weight: bold;
  }
+ .img{
+   height: pxToRem(200px);
+ }
+ .mess{
+   width: 100%;
+   line-height: pxToRem(30px);
+   font-size: pxToRem(16px);
+   color: #000;
+ }
+ .span{
+   color: red;
+ }
+ .time{
+   width: 100%;
+   overflow: hidden;
+   text-overflow:ellipsis;
+   white-space: nowrap;
+   height:pxToRem(35px);
+   line-height: pxToRem(20px);
+   font-size: pxToRem(14px);
+   color: #666;
+ }
