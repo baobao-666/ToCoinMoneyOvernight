@@ -58,7 +58,7 @@ const ClassFiy: React.FC<Proptype> = (props) => {
                                           {     
                                           ClassFiy.rightList.length ?
                                                 ClassFiy.rightList.map((item: any, index: number) => {
-                                                      return <a key={index}>
+                                                      return <a key={index}  onClick={()=>Jump(item)}>
                                                             <img src={item.wap_banner_url}></img>
                                                             <div className="subCategoryItemName">{item.name}</div>
                                                       </a>

@@ -11,4 +11,6 @@ export const getFendateId = (params:object) => requst.get('/catalog/current',par
 
 // 获取分类ID分类Nav数据
 
-export const getFendateNav = (params:any) => requst.get(`/goods/category/id=${params}`)
+export const getFendateNav = (params:any) => requst.get(`/goods/category?id=${params}`)
+
+export const getFendateBox = (params:any) => requst.get(`/goods/list?page=${params.page}&size=${params.size}&categoryId=${params.categoryId}`)
