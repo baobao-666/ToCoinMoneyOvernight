@@ -6,10 +6,16 @@ export interface shopCartType{
     id:number,
     name:string,
     goods_brief:string,
+    question:string,
+    answer:string,
+    goods_id:number,
+    value:string,
+    goods_desc:string
    
  
    
 }
+
 
 
 

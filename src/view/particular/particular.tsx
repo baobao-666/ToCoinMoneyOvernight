@@ -3,11 +3,10 @@ import { useObserver } from 'mobx-react-lite'
 import useStore from '../../utils/useState'
 import style from './css/del.module.scss'
 import ShoppCart from '../homePage/shoppingCart/index';
-
-
-
+import { History } from 'history'
 interface detadetType {
     location: Location
+    history: History
 }
 const Particular: React.FC<detadetType> = (props) => {
     let store = useStore()
@@ -16,10 +15,13 @@ const Particular: React.FC<detadetType> = (props) => {
 
 
     useEffect(() => {
-        let id = 1166008
+        let id = 1138001
         ShoppCart.getDet({ id })
 
     }, [ShoppCart])
+    let goFn = () => {
+        props.history.push('/homepage/shoppingCart')
+    }
 
     return useObserver(() => (
         <div className={style.noTabPageContent}>
@@ -27,8 +29,8 @@ const Particular: React.FC<detadetType> = (props) => {
             {
                 ShoppCart.det.map((item, index) => {
                     return <div className='noTabPageContent' key={index}>
-                        <div className='header'>
-                            <div className={style.left}>&lt;</div>
+                        <div className={style.headers}>
+                            <div className={style.left} onClick={() => goFn()}>&lt;</div>
                             <div className={style.title}>{item.name}</div>
                             <div className={style.right}></div>
                         </div>
@@ -65,16 +67,54 @@ const Particular: React.FC<detadetType> = (props) => {
                             <div>x0</div>
                             <div>选择规格</div>
                         </div>
-                        <div className={style.goodsAttribute}>
+                     
 
-                        </div>
                     </div>
 
                 })
             }
+            <div className={style.goodsAttribute} >
+                <div className={style.goodsAttributeLine}>—— 商品参数 ——</div>
+                {
+                    ShoppCart.attribute.map((it, indexs) => {
+                        return <div className={style.goodsAttributeList} key={indexs}>
+                            <div className={style.goodsAttributeItem}>
+                    <div className={style.attributeLabel}>{it.name}</div>
+                    <div className={style.attributeContent}>{it.value}</div>
+                            </div>
+                         
+                        </div>
+                    })
+                }</div>
+            <div className={style.goodsAttributes}>
+
+                <div className={style.goodsAttributeLine}> —— 常见问题 ——</div>
+
+
+                {
+                    ShoppCart.data.map((ite, i) => {
+                        return <div className={style.problemWrap} key={i}>
+                            <div className={style.problemLabel}>
+                                <span>√</span>
+                                {ite.question}
+                            </div>
+                            <div className={style.problemContent}>
+                                {ite.answer}
+                            </div>
+                        </div>
+                    })
+                }
+                <div className={style.goodsPageDo}>
+                    <div className={style.isLike}></div>
+                    <div className={style.cartNum}></div>
+                    <div className={style.addCart}>加入购物车</div>
+                    <div className={style.payGoods}>立即购买</div>
+                </div>
+            </div>
 
 
         </div>
+
 
 
     ))

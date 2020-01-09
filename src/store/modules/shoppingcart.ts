@@ -13,6 +13,8 @@ export default class CreateStore{
      det:shopCartType[]=[];
      @observable
      data:shopCartType[]=[];
+     @observable
+     attribute:shopCartType[]=[]
      
     
 
@@ -27,8 +29,11 @@ export default class CreateStore{
     let res:any=await getDet(params)
     this.det=[res.info]
     this.data=res.issue
+    this.attribute=res.attribute
      console.log(res.issue)
      console.log(res.info)
+     console.log(res)
+     console.log(res.attribute)
     }
-   
+    
 }
