@@ -9,15 +9,14 @@ import {getShop} from '../../api/shop'
 export default class CreateStore{
     @observable
     list:shopCartType[]=[];
-    @observable
-    total:shopCartType[]=[];
+  
     
 
     @action
     async getShop(){
         let res:any=await getShop();
         this.list=res.cartList
-        this.total=res.cartTotal
+      
         console.log(res)
         
     }

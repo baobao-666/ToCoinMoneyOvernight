@@ -8,9 +8,8 @@ const ShoppCart: React.FC = () => {
   let { ShoppCart } = store;
   useEffect(() => {
     ShoppCart.getShop();
-   
+    
   }, [ShoppCart]);
-  
   return useObserver(() => (
     <div className='cart-wrap'>
       <div className='header'>
@@ -27,53 +26,54 @@ const ShoppCart: React.FC = () => {
           <span>满88元免邮费</span>
         </p>
       </div>
-    
 
-        <div className='count' >
+
+      <div className='count' >
         {
           ShoppCart.list.map((item, index) => {
             return <div className='list' key={index}>
               <div className='ck'>
-              <input type="checkbox" name="" id=""/>
+                <input type="checkbox" name="" id="" />
               </div>
-               <div className='lefts'>
-                 <img src={item.list_pic_url} alt=""/>
-               </div>
-               <div className='center' key={index}>
-          <div>{item.goods_name}</div>
-                  <div></div>
-          <div>￥{item.retail_price}</div>
+              <div className='lefts'>
+                <img src={item.list_pic_url} alt="" />
+              </div>
+              <div className='center' key={index}>
+                <div>{item.goods_name}</div>
+                <div></div>
+                <div>￥{item.retail_price}</div>
 
-               </div>
-               <div className='rights'>
-              x{item.number}
-               </div>
-             </div>
-         })
-      }
-        </div>
-        <div className='foot'>
-          
-            <div className='ck'>
-                <input type="checkbox" name="" id=""/>
-                
+              </div>
+              <div className='rights'>
+                x{item.number}
+              </div>
             </div>
-            <span>
-                  已选() 
-                </span>
-                <span>
-                  ￥
-                </span>
-                <button>下单</button>
-             
-              
-            
-          
-      
+          })
+        }
       </div>
-      
-      
-      
+      <div className='foot'>
+
+        <div className='ck'>
+          <input type="checkbox" name="" id="" />
+
+        </div>
+        <span>已选()</span>
+        <span> ￥</span>
+        <span>编辑</span>
+        <button>下单</button>    
+        
+     
+
+
+
+
+
+
+
+      </div>
+
+
+
     </div>
   )
 
