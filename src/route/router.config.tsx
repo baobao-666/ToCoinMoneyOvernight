@@ -6,6 +6,7 @@ import HomePage from '../view/homePage/index'
 import LoginPage from '../view/login/index';
 import Detail from '../view/detail/index'
 import Particular from '../view/particular/particular'
+import Categorys from '../view/categorys/index'
 
 // 二级路由
 import HomeCode from '../view/homePage/home/index'
@@ -72,6 +73,11 @@ const RouterConfig:IRouterItem[]=[
     type:'route',
     path:'/detail',
     component:Detail
+   },
+   {
+    type:'route',
+    path:'/categorys',
+    component:Categorys
    },
    {
     type:"route",

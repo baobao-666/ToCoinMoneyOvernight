@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './css/index.css'
 import { useObserver } from 'mobx-react-lite'
+import {History} from 'history'
 
 import useStore from '../../../utils/useState'
+    
 
-const ClassFiy: React.FC = () => {
+interface Proptype{
+      history:History
+}
+
+const ClassFiy: React.FC<Proptype> = (props) => {
 
       let store = useStore();
       let { ClassFiy } = store;
@@ -17,9 +23,10 @@ const ClassFiy: React.FC = () => {
       //       console.log()
       // }
 
-      // let jump = () => {
-
-      // }
+      let Jump = (item:any) => {
+            console.log(item.id)
+            props.history.push({pathname:'/categorys',state:item.id})
+      }
       return useObserver(() => (
             <div className="classfiy-wrap">
                   <div className="searchWrap">
@@ -56,7 +63,7 @@ const ClassFiy: React.FC = () => {
                                                             <div className="subCategoryItemName">{item.name}</div>
                                                       </a>
                                                 }) : ClassFiy.curList.map((item: any, index: number) => {
-                                                      return <a key={index} className="categoryWrap" onClick={()=>{ ClassFiy.Jump(item)}}>
+                                                      return <a key={index} className="categoryWrap" onClick={()=>Jump(item)}>
                                                             <img src={item.wap_banner_url}></img>
                                                             <div className="subCategoryItemName">{item.name}</div>
                                                       </a>
