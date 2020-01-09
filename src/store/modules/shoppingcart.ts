@@ -1,5 +1,5 @@
 
-import {shopCartType} from '../types/shoppingcart'
+import {shopCartType, ItemTypes} from '../types/shoppingcart'
  
 // 引入mobx
 import {observable,action,computed} from 'mobx'
@@ -15,6 +15,11 @@ export default class CreateStore{
      data:shopCartType[]=[];
      @observable
      attribute:shopCartType[]=[]
+     @observable
+     Lunbolist:ItemTypes[]=[]
+     @observable
+     comment:shopCartType[]=[]
+   
      
     
 
@@ -29,11 +34,16 @@ export default class CreateStore{
     let res:any=await getDet(params)
     this.det=[res.info]
     this.data=res.issue
+    this.Lunbolist=res.gallery
     this.attribute=res.attribute
-     console.log(res.issue)
-     console.log(res.info)
+    this.comment=res.comment
+    //  console.log(res.issue)
+    //  console.log(res.info)
+    //  console.log(res.gallery)
+    //  console.log(res.attribute)
      console.log(res)
-     console.log(res.attribute)
+     console.log(res.comment)
+
     }
     
 }

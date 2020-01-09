@@ -1,3 +1,6 @@
+
+import { specialType } from './special';
+
 export interface shopCartType{
     list_pic_url:string,
     goods_name:string,
@@ -8,13 +11,28 @@ export interface shopCartType{
     goods_brief:string,
     question:string,
     answer:string,
-    goods_id:number,
+     goods_id:number,
     value:string,
-    goods_desc:string
+    goods_desc:any,
+ 
+    
    
  
    
 }
+export interface ItemTypes{
+    id:number,
+    img_url:string,
+     img_desc:string,
+     sort_order:any,
+     goods_id:number
+
+}
+export interface Type{
+    Lunbolist:ItemTypes[]
+
+}
+
 
 
 
