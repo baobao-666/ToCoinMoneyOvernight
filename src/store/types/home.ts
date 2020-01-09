@@ -8,7 +8,9 @@ export interface ItemType {
     image_url: string,
     content: string,
     end_time: number,
-    enabled: number
+    enabled: number,
+    
+    
 }
 
 export interface Type {
@@ -103,3 +105,23 @@ export interface  topicItemType {
     is_show: number
 }
 
+// categoryList 数据
+
+export interface categoryListType {
+    categoryList: any[]
+    categoryItem: any[]
+
+}
+
+export interface categoryItemType {
+    id: number
+    name: string
+    goodsList: goodsListType[]
+}
+
+export interface  goodsListType {
+    id: number
+    name: string
+    list_pic_url: string
+    retail_price: number
+}

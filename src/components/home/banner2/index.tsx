@@ -12,6 +12,7 @@ const Code:React.FC<topicListType> = (props) => {
                            </div>
                            <WingBlank
                             style = { { margin:0 } }
+                            className = {style.banner}
                            >
                                  <Carousel className={ style.space_carousel }
                                    frameOverflow="visible"
@@ -27,20 +28,26 @@ const Code:React.FC<topicListType> = (props) => {
                                     props.topicList.map((val:topicItemType, index:number) => (
                                         // eslint-disable-next-line jsx-a11y/anchor-is-valid
                                         <a
+                                           className={style.a}
                                            key={index}
                                            href="#"
                                            style={{
                                              display: 'block',
-                                             position: 'relative',
-                                             boxShadow: '2px 1px 1px rgba(0, 0, 0, 0.2)',
+                                             position: 'relative'
                                            }}
                                          >
                                          <img
                                           src={val.item_pic_url}
                                           alt=""
-                                          style={{ width: '100%', verticalAlign: 'top' , overflow:'hidden'  }}
+                                          className = { style.img }
+                                          style={{ width: '100%', verticalAlign: 'top'  }}
                                           />
-                                          <div>111111</div>
+                                          <div className = { style.mess } >
+                                            {val.title} <span className = { style.span } >￥ {val.price_info}元起</span>
+                                          </div>
+                                          <div className = { style.time } >
+                                             { val.subtitle }
+                                          </div>
                                         </a>
                                     ))
                                   }
