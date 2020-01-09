@@ -13,10 +13,13 @@ const ClassFiy: React.FC = () => {
             ClassFiy.getFendate()
       }, [ClassFiy])
 
-      let Cli = (ele: number) => {
-            console.log()
-      }
+      // let Cli = (ele: number) => {
+      //       console.log()
+      // }
 
+      // let jump = () => {
+
+      // }
       return useObserver(() => (
             <div className="classfiy-wrap">
                   <div className="searchWrap">
@@ -53,7 +56,7 @@ const ClassFiy: React.FC = () => {
                                                             <div className="subCategoryItemName">{item.name}</div>
                                                       </a>
                                                 }) : ClassFiy.curList.map((item: any, index: number) => {
-                                                      return <a key={index} className="categoryWrap">
+                                                      return <a key={index} className="categoryWrap" onClick={()=>{ ClassFiy.Jump(item)}}>
                                                             <img src={item.wap_banner_url}></img>
                                                             <div className="subCategoryItemName">{item.name}</div>
                                                       </a>

@@ -1,7 +1,7 @@
 
 // 引入mobx
 import {observable,action,computed} from 'mobx'
-import { getFendate,getFendateId } from '../../api/fen'
+import { getFendate,getFendateId,getFendateNav} from '../../api/fen'
 import { observer } from 'mobx-react-lite';
 import { AsyncResource } from 'async_hooks';
 // 定义数据
@@ -26,6 +26,9 @@ export default class CreateStore{
     
     @observable
     curTit: any;
+  
+    @observable
+    funnyList: any;
 
     @action
     async getFendate(){
@@ -45,6 +48,13 @@ export default class CreateStore{
         this.curTit = res.currentCategory.front_name;
         this.curUrl = res.currentCategory.wap_banner_url;
         this.curIndex = index;
+    }
+
+    @action
+    async Jump(item:any){
+        let res:any = await getFendateNav({id:item.id})
+        console.log("res****",res.brotherCategory)
+        this.funnyList=res.brotherCategory
     }
   
 }

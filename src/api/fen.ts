@@ -8,3 +8,7 @@ export const getFendate = () => requst.get('/catalog/index')
 
 export const getFendateId = (params:object) => requst.get('/catalog/current',params)
 
+
+// 获取分类ID分类Nav数据
+
+export const getFendateNav = (params:any) => requst.get('/goods/category',params)
