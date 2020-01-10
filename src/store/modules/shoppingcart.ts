@@ -21,6 +21,8 @@ export default class CreateStore{
      comment:shopCartType[]=[]
       @observable
       counts:shopCartType[]=[]
+      @observable
+      pic:shopCartType[]=[]
    
      
     
@@ -40,6 +42,7 @@ export default class CreateStore{
     this.attribute=res.attribute
     this.comment=[res.comment.data]
      this.counts=[res.comment.count]
+     this.pic=[res.comment.data.pic_list]
     //  console.log(res.issue)
     //  console.log(res.info)
     //  console.log(res.gallery)
@@ -48,6 +51,7 @@ export default class CreateStore{
      console.log(res.comment.data)
      console.log(res.comment)
      console.log(res)
+     console.log(res.comment.data.pic_list)
 
     }
     
