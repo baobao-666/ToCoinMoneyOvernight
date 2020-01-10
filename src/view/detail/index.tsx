@@ -4,6 +4,7 @@ import {useObserver} from 'mobx-react-lite'
 import useStore from '../../utils/useState'
 import './css/index.css';
 import {History} from 'history'
+import '../../static/icon/iconfont.css'
 interface detailType{
     location:Location,
     history:History
@@ -22,23 +23,28 @@ const Detail:React.FC<detailType> =(props)=>{
         Special.getCommentData({valueId:state,typeId,page,size});
         // 相关专题数据
         Special.getRelatedDate({id:state})
-    },[Special, state])
+    },[Special, state]);
+    // 放回上一级
     let changeProv=()=>{
-        props.history.push('homepage/special');
+        props.history.push('homepage/special',state);
     }
+    //更多评论数据
+    let commentRrite=()=>{
+        props.history.push('/commentWrite',state);
+    } 
     return useObserver(()=>(
         <div className='detail'>
             {Special.detailData.map((item,index)=>{
                 return <div key={index} className='detail'>
                     <div className='header'>
-                        <div className="left" onClick={()=>changeProv()}><span>&lt;</span></div>
+                        <div className="left" onClick={()=>changeProv()}><i className='icon iconfont icon-mjiantou-copy'></i></div>
                         <div className="title">{item.title}</div>
                         <div className="right"></div>
                     </div>
                     <main>
                     <div dangerouslySetInnerHTML={{__html:item.content}} />
                     <div className="tieleLine">
-                        <span>精选留言</span> <i>留言</i>
+                        <span>精选留言</span> <i className='icon iconfont icon-yijian'></i>
                     </div>
                     <div className='content'>
                         {
@@ -86,7 +92,7 @@ const Detail:React.FC<detailType> =(props)=>{
                                         </div>
                                     })
                                  }
-                                  <p className='moreComment'><a href="#">查看更多评论</a></p>
+                                  <p className='moreComment' onClick={()=>commentRrite()}>查看更多评论</p>
                             </div>
                         }
                        
@@ -100,7 +106,6 @@ const Detail:React.FC<detailType> =(props)=>{
                                         <p>{ele.title}</p>
                                     </div>
                                 })
-                                
                             }
                         </div>
                     </main>
