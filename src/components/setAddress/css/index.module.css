@@ -13,13 +13,18 @@
   flex: 1;
 }
 
-.conter .input {
+.conter .input, .conter .inputs {
   width: 100%;
   border: none;
+  height: 1.33333rem;
   border-bottom: 0.02667rem solid #ccc;
   font-size: 0.42667rem;
-  line-height: 1.06667rem;
+  line-height: 1.33333rem;
   padding-left: 0.4rem;
+}
+
+.conter .inputs {
+  border-top: 0.02667rem solid #ccc;
 }
 
 .footer {
