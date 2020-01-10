@@ -12,16 +12,16 @@ interface detadetType {
     history: History
 }
 const Particular: React.FC<detadetType> = (props) => {
-    // let {state}=props.location as {state?:any}
+     let {state}=props.location as {state?:any}
     let store = useStore()
     let { ShoppCart } = store
     // console.log(state)
-      console.log(ShoppCart.getList)
+    //   console.log(ShoppCart.getList)
 
     useEffect(() => {
-        let id = 1070000
-        ShoppCart.getDet({ id })
-        ShoppCart.getData({ id })
+        // let id = 1070000
+        ShoppCart.getDet({ id:state })
+        ShoppCart.getData({ id:state })
 
     }, [ShoppCart])
     let goFn = () => {
@@ -166,11 +166,10 @@ const Particular: React.FC<detadetType> = (props) => {
                 <div className={style.goodsAttribute}>
                     <div className={style.goodsAttributeLine}> ——大家都在看——</div>
                  </div>
-                    
+                    <div className={style.goodsList}>
                     {
                         ShoppCart.getList.map((items, value) => {
-                            return <div key={value} className={style.goodsList}>
-                                <div className={style.goodsList}>
+                            return    <div className={style.goodsList} key={value}>
                                     <div className={style.goodsItem}>
                                         <div className={style.goodsItemImg}>
                                             <img src={items.list_pic_url} alt="" />
@@ -185,11 +184,11 @@ const Particular: React.FC<detadetType> = (props) => {
 
                                 </div>
 
-                            </div>
+                           
                         })
                     }
                
-
+ </div>
 
                 <div className={style.goodsPageDo}>
                     <div className={style.isLike}></div>

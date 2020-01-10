@@ -9,6 +9,8 @@ export let getDet = (params:any)=>{
 }
 
 export let getData=(params:any)=>{
+  
     return request.get('/goods/related',{id:params.id})
+    
 }
 
