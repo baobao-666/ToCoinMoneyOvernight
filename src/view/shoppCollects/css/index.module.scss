@@ -1,0 +1,40 @@
+@function pxToRem($px) {
+    @return $px / 37.5px * 1rem;
+  }
+  .wrap {
+    width: 100%;
+  }
+  .item {
+    width: 100%;
+    height: pxToRem(120px);
+    border-bottom: pxToRem(1px) solid #ccc;
+    display: flex;
+    .logo {
+      width: pxToRem(130px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .img {
+        width: 80%;
+      }
+    }
+    .title {
+      flex: 1;
+      box-sizing: border-box;
+      padding-top: pxToRem(10px);
+      .myname{
+        line-height: pxToRem(30px);
+        font-size: pxToRem(16px);
+      }
+      .mess{
+        line-height: pxToRem(30px);
+        font-size: pxToRem(14px);
+        color: #666;
+      }
+      .price{
+        line-height: pxToRem(30px);
+        font-size: pxToRem(16px);
+        color: red;
+      }
+    }
+  }

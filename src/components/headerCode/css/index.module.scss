@@ -1,0 +1,22 @@
+@function pxToRem($px) {
+    @return $px / 37.5px * 1rem;
+}
+.wrap{
+    width: 100%;
+    height: pxToRem(45px);
+    box-shadow: 0 0.04rem 0.08rem 0 rgba(0,0,0,.12), 0 0 pxToRem(6px) 0 rgba(0,0,0,.04);
+    position: relative;
+    line-height: pxToRem(45px);
+    text-align: center;
+    font-size: pxToRem(16px);
+}
+.icon{
+    position: absolute;
+    top: pxToRem(1px);
+    left: pxToRem(10px);
+    font-size: pxToRem(22px);
+    font-weight: bold;
+}
+.blo{
+    display: none;
+}

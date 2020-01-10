@@ -2,7 +2,7 @@
 import {shopCartType, ItemTypes} from '../types/shoppingcart'
  
 // 引入mobx
-import {observable,action,computed} from 'mobx'
+import {observable,action} from 'mobx'
 import { getShop,getDet} from '../../api/shop';
 
 // 定义数据

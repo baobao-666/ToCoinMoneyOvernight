@@ -3,9 +3,12 @@ import React from 'react'
 import style from './css/index.module.css'
 import { Carousel, WingBlank } from 'antd-mobile';
 
+import { useHistory } from 'react-router-dom'
+
 import { topicItemType, topicListType } from '../../../store/types/home'
 
 const Code:React.FC<topicListType> = (props) => {
+  let history = useHistory()
           return <div className = { style.wrap } >
                            <div className = { style.title } >
                                {props.title}
@@ -30,11 +33,11 @@ const Code:React.FC<topicListType> = (props) => {
                                         <a
                                            className={style.a}
                                            key={index}
-                                           href="#"
                                            style={{
                                              display: 'block',
                                              position: 'relative'
                                            }}
+                                           onClick = { ()=>{ history.push('/detail',val.id) }  }
                                          >
                                          <img
                                           src={val.item_pic_url}

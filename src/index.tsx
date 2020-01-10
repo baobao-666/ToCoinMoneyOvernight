@@ -8,7 +8,7 @@ import 'antd-mobile/dist/antd-mobile.css'
 
 import StoreContext  from  './context/index'
 import store from './store/index'
-
+import './static/icon/iconfont.css'
 ReactDOM.render( 
                <StoreContext.Provider value={store} >
                      <React.Suspense fallback = { <div> login.... </div> } >

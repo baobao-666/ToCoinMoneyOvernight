@@ -1,6 +1,5 @@
-import {observable,action, computed} from 'mobx'
+import {observable,action} from 'mobx'
 import { getFendateNav ,getFendateBox} from '../../api/fen'
-import { categorysType } from '../types/categorys'
 
 export default class CreateStore{
     @observable

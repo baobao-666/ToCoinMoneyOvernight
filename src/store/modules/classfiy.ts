@@ -1,9 +1,8 @@
 
 // 引入mobx
 import {observable,action} from 'mobx'
-import { getFendate,getFendateId,getFendateNav} from '../../api/fen'
-import { observer } from 'mobx-react-lite';
-import { AsyncResource } from 'async_hooks';
+import { getFendate,getFendateId } from '../../api/fen'
+
 // 定义数据
 export default class CreateStore{
     @observable

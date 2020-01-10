@@ -14,12 +14,12 @@ const My: React.FC<Types> = (props) => {
         {
             icon: "icon iconfont icon-collect",
             title: "我的收藏",
-            path: "/title"
+            path: "/shoppCollects"
         },
         {
             icon: "icon iconfont icon-dizhi",
             title: "地址管理",
-            path: "/title"
+            path: "/address"
         },
         {
             icon: "icon iconfont icon-dingdan",
@@ -69,14 +69,14 @@ const My: React.FC<Types> = (props) => {
             setName('暂无用户')
         }
     }, [])
-    
-    const alertError = () =>{
+
+    const alertError = () => {
         Toast.fail('亲,该功能暂未开启请稍后', 1);
     }
-    const logOut = () =>{
-       localStorage.removeItem("token")
-       localStorage.removeItem("mobile")
-       props.history.push("/login")
+    const logOut = () => {
+        localStorage.removeItem("token")
+        localStorage.removeItem("mobile")
+        props.history.push("/login")
     }
 
     return (
@@ -91,15 +91,14 @@ const My: React.FC<Types> = (props) => {
             <div className={style.userPower}>
                 {
                     useList.map((item, index) => {
-
                         if (item.path) {
                             // eslint-disable-next-line jsx-a11y/anchor-is-valid
-                            return <a href="#" className={style.a} key={index} >
+                            return <a href={item.path} className={style.a} key={index} >
                                 <i className={`${item.icon} ${style.i}  `} ></i>
                                 <div className={style.title} >{item.title}</div>
                             </a>
                         } else {
-                            return <div className={style.item} key={index} onClick = {()=>{alertError()}}  >
+                            return <div className={style.item} key={index} onClick={() => { alertError() }}  >
                                 <i className={`${item.icon} ${style.i}  `} ></i>
                                 <div className={style.title} >{item.title}</div>
                             </div>
@@ -107,7 +106,7 @@ const My: React.FC<Types> = (props) => {
                     })
                 }
             </div>
-            <div onClick={ () => { logOut() } } className={style.loginOut}>退出登录</div>
+            <div onClick={() => { logOut() }} className={style.loginOut}>退出登录</div>
 
         </div>
     );

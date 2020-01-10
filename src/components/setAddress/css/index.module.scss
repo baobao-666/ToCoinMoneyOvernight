@@ -1,0 +1,33 @@
+@function pxToRem($px) {
+    @return $px / 37.5px * 1rem;
+}
+
+.wrap{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.conter{
+    flex: 1;
+    .input{
+        width: 100%;
+        border: none;
+        border-bottom: pxToRem(1px) solid #ccc;
+        font-size: pxToRem(16px);
+        line-height: pxToRem(40px);
+        padding-left: pxToRem(15px);
+    }
+}
+.footer{
+    width: 100%;
+    height: pxToRem(50px);
+    display: flex;
+    .button{
+        flex: 1;
+    }
+}

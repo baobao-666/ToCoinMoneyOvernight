@@ -7,9 +7,11 @@ import { IRouterItem } from './index.d'
 const HomePage = React.lazy(() => import('../view/homePage/index'));
 const LoginPage = React.lazy(() => import('../view/login/index'));
 const Detail = React.lazy(() => import('../view/detail/index'));
-const CommentWrite = React.lazy(() => import('../view/commentWrite/index'))
+const CommentWrite = React.lazy(() => import('../view/commentWrite/index'));
 const Particular = React.lazy(() => import('../view/particular/particular'));
-const Categorys = React.lazy(() => import('../view/categorys'));
+const Categorys = React.lazy(() => import('../view/categorys/index'));
+const Address = React.lazy(() => import('../view/address/index') );
+const ShoppCollects = React.lazy(() => import('../view/shoppCollects/index') );
 
 
 // 二级路由
@@ -97,6 +99,16 @@ const RouterConfig: IRouterItem[] = [
         type: 'route',
         path: '/particular',
         component: Particular
+    },
+    {
+        type: 'route',
+        path: '/address',
+        component: Address
+    },
+    {
+        type: 'route',
+        path: '/shoppCollects',
+        component: ShoppCollects
     },
     {
         type: "redirect",
