@@ -8,11 +8,7 @@ export let getDet = (params:any)=>{
     return  request.get('/goods/detail',{id:params.id})
 }
 
-// //获取数量
-// export let getNmu = ()=>{
-//     return  request.get('/cart/goodscount')
-// }//是否选中
-// export let getPitch = (params:any)=>{
-//     return  request.post('/cart/checked',params)
-// }
+export let getData=(params:any)=>{
+    return request.get('/goods/related',{id:params.id})
+}
 

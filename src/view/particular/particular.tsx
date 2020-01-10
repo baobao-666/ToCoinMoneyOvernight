@@ -3,8 +3,10 @@ import { useObserver } from 'mobx-react-lite'
 import useStore from '../../utils/useState'
 import style from './css/del.module.scss'
 import { History } from 'history'
- 
-import Lunbolist from '../../components/swiper/index';
+
+
+import Lunbolist from '../../components/particular/swiper/index';
+
 interface detadetType {
     location: Location
     history: History
@@ -14,11 +16,12 @@ const Particular: React.FC<detadetType> = (props) => {
     let store = useStore()
     let { ShoppCart } = store
     // console.log(state)
-    console.log(ShoppCart.comment)
-    
-   useEffect(() => {
-      let id=1009024
-         ShoppCart.getDet({ id })
+      console.log(ShoppCart.getList)
+
+    useEffect(() => {
+        let id = 1070000
+        ShoppCart.getDet({ id })
+        ShoppCart.getData({ id })
 
     }, [ShoppCart])
     let goFn = () => {
@@ -31,25 +34,34 @@ const Particular: React.FC<detadetType> = (props) => {
                 ShoppCart.det.map((item, index) => {
                     return <div className='noTabPageContent' key={index}>
                         <div className={style.headers}>
-                            <div className={style.left } onClick={() => goFn()}></div>
+                            <div className={style.left} onClick={() => goFn()}></div>
                             <div className={style.title}>{item.name}</div>
                             <div className={style.right}></div>
                         </div>
-                    <Lunbolist Lunbolist = {ShoppCart.Lunbolist}></Lunbolist>
-                       
-                        <div className={style.nav}>
-                            <p>
-                                <i ></i>
-                                <span>30天无忧退货</span>
-                            </p>
-                            <p>
-                                <i></i>
-                                <span>48小时快速退款</span>
-                            </p>
-                            <p>
-                                <i></i>
-                                <span>满80元免运费</span>
-                            </p>
+                        <Lunbolist Lunbolist={ShoppCart.Lunbolist}></Lunbolist>
+
+                        <div className={style.serviceList}>
+                            <ul>
+                                <li>
+                                    <span>★</span>
+                                    30天无忧退货
+            </li>
+
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span>★</span>
+                                    48小时快速退款
+            </li>
+
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span>★</span>
+                                    满88元免邮费
+            </li>
+
+                            </ul>
                         </div>
                         <div className={style.name}>
                             <div className={style.goodsNameTitle}>
@@ -64,7 +76,7 @@ const Particular: React.FC<detadetType> = (props) => {
                         </div>
                         <div className={style.goodsSize}>
                             <div></div>
-                <div>X{item.counter_price}</div>
+                            <div>X{item.counter_price}</div>
                             <div>选择规格</div>
                         </div>
 
@@ -74,43 +86,43 @@ const Particular: React.FC<detadetType> = (props) => {
                 })
             }
             {
-                
-                ShoppCart.counts.map((items,i)=>{
-                return <div key={i} className={style.goodsComment}>
-                    <div className={style.goodsCommentTitle}>
-                        <div>评论({items.count})</div>
-                        <div>查看全部></div>
+
+                ShoppCart.counts.map((items, i) => {
+                    return <div key={i} className={style.goodsComment}>
+                        <div className={style.goodsCommentTitle}>
+                            <div>评论({items.count})</div>
+                            <div>查看全部></div>
+                        </div>
+
                     </div>
-                    
-                </div>
                 })
             }
             {
-                ShoppCart.comment.map((item,index)=>{
+                ShoppCart.comment.map((item, index) => {
                     return <div key={index} className={style.commentList}>
                         <div className={style.commentItem}>
                             <div className={style.userInfo}>
-                <div>匿名用户</div>
-                <div>{item.add_time}</div>
+                                <div>匿名用户</div>
+                                <div>{item.add_time}</div>
                             </div>
                             <div className={style.userComment}>
                                 {item.content}
                             </div>
-                            
+
                         </div>
                     </div>
                 })
             }
             {
-                ShoppCart.pic.map((item,index)=>{
+                ShoppCart.pic.map((item, index) => {
                     return <div key={index}>
-<img src={item.pic_url} alt=""/>
+
                     </div>
                 })
             }
-            
-          
-            
+
+
+
             <div className={style.goodsAttribute} >
                 <div className={style.goodsAttributeLine}>—— 商品参数 ——</div>
                 {
@@ -126,7 +138,7 @@ const Particular: React.FC<detadetType> = (props) => {
                 }
                 {
                     ShoppCart.det.map((item, index) => {
-                        return <div dangerouslySetInnerHTML={{ __html: item.goods_desc }} key={index} className={style.topicDetailImg}/>
+                        return <div dangerouslySetInnerHTML={{ __html: item.goods_desc }} key={index} className={style.topicDetailImg} />
                     })
                 }
 
@@ -147,9 +159,38 @@ const Particular: React.FC<detadetType> = (props) => {
                             <div className={style.problemContent}>
                                 {ite.answer}
                             </div>
+
                         </div>
                     })
                 }
+                <div className={style.goodsAttribute}>
+                    <div className={style.goodsAttributeLine}> ——大家都在看——</div>
+                 </div>
+                    
+                    {
+                        ShoppCart.getList.map((items, value) => {
+                            return <div key={value} className={style.goodsList}>
+                                <div className={style.goodsList}>
+                                    <div className={style.goodsItem}>
+                                        <div className={style.goodsItemImg}>
+                                            <img src={items.list_pic_url} alt="" />
+                                        </div>
+                                        <div className={style.goodsItemName}>
+                                            {items.name}
+                                        </div>
+                                        <div className={style.goodsItemPrice}>
+                                            {items.retail_price}
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        })
+                    }
+               
+
+
                 <div className={style.goodsPageDo}>
                     <div className={style.isLike}></div>
                     <div className={style.cartNum}></div>
