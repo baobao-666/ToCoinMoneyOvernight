@@ -15,7 +15,7 @@ const  Special: React.FC<topicType> = (props) => {
   useEffect(()=>{
     Special.getSpecialData({page,size})
   },[Special]);
-
+  // 详情
   let changeDetail= (id:number)=>{  // 
     props.history.push('/detail',id);
   }

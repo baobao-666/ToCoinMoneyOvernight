@@ -28,13 +28,11 @@ export default class CreateStore{
     async getSpecialData(obj:object){
         const res:any =await getSpecialData(obj);
         this.list = res.data;
-        console.log(res,'专题数据');
     }
     @action
     async getSpecialDetailDate(obj:Object){
         const res:any =await getSpecialDetailDate(obj);
         this.detailData=[res]; 
-        console.log(this.detailData,'详情数据');
         
     }
 
@@ -42,14 +40,12 @@ export default class CreateStore{
     async getCommentData(obj:Object){
         const res:any =await getCommentData(obj);
         this.commentData=res.data;
-        console.log(res.data,'评论'); 
     }
 
     @action
     async getRelatedDate(obj:Object){
         const res:any =await getRelatedDate(obj);
         this.relatedDate=res;
-        console.log(res,'相关'); 
     }
 
     

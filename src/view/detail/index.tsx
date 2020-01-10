@@ -7,7 +7,7 @@ import {History} from 'history'
 import '../../static/icon/iconfont.css'
 interface detailType{
     location:Location,
-    history:History
+    history:History,
 }
 const typeId = 1;
 const page = 1;
@@ -26,12 +26,22 @@ const Detail:React.FC<detailType> =(props)=>{
     },[Special, state]);
     // 放回上一级
     let changeProv=()=>{
-        props.history.push('homepage/special',state);
+        props.history.goBack()
     }
     //更多评论数据
     let commentRrite=()=>{
-        props.history.push('/commentWrite',state);
+        props.history.push('/moreComment',state);
     } 
+
+    //  相关专题详情
+    let changeDetail= (id:number)=>{  
+        props.history.push('/detail',id);
+      } 
+    
+    // 留言
+    let leave=()=>{
+        props.history.push('/commentWrite');
+    }
     return useObserver(()=>(
         <div className='detail'>
             {Special.detailData.map((item,index)=>{
@@ -44,7 +54,7 @@ const Detail:React.FC<detailType> =(props)=>{
                     <main>
                     <div dangerouslySetInnerHTML={{__html:item.content}} />
                     <div className="tieleLine">
-                        <span>精选留言</span> <i className='icon iconfont icon-yijian'></i>
+                        <span>精选留言</span> <i className='icon iconfont icon-yijian' onClick={leave}></i>
                     </div>
                     <div className='content'>
                         {
@@ -92,7 +102,10 @@ const Detail:React.FC<detailType> =(props)=>{
                                         </div>
                                     })
                                  }
-                                  <p className='moreComment' onClick={()=>commentRrite()}>查看更多评论</p>
+                                 {
+                                     Special.commentData.length>4? <p className='moreComment' onClick={()=>commentRrite()}>查看更多评论</p>:''
+                                 }
+                                 
                             </div>
                         }
                        
@@ -101,7 +114,7 @@ const Detail:React.FC<detailType> =(props)=>{
                             <p>推荐主题</p>
                             {
                                 Special.relatedDate.map((ele,i)=>{
-                                    return <div className='recomImg' key={i}>
+                                    return <div className='recomImg' key={i} onClick={()=>changeDetail(ele.id)}>
                                         <img src={ele.scene_pic_url} alt=""/>
                                         <p>{ele.title}</p>
                                     </div>

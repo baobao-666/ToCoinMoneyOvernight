@@ -12,7 +12,7 @@ const Particular = React.lazy(() => import('../view/particular/particular'));
 const Categorys = React.lazy(() => import('../view/categorys/index'));
 const Address = React.lazy(() => import('../view/address/index') );
 const ShoppCollects = React.lazy(() => import('../view/shoppCollects/index') );
-
+const MoreComment = React.lazy(() => import('../view/moreComment/index'))
 
 // 二级路由
 const HomeCode = React.lazy(() => import('../view/homePage/home/index'));
@@ -86,8 +86,13 @@ const RouterConfig: IRouterItem[] = [
     },
     {
         type: 'route',
-        path: '/commentWrite',
-        component: CommentWrite
+        path: '/moreComment',
+        component: MoreComment
+    },
+    {
+        type:'route',
+        path:'/commentWrite',
+        component:CommentWrite
     },
     {
         type: "route",
