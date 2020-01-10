@@ -10,7 +10,7 @@ const Nav:React.FC<NavTypes> = (props) =>{
    return <div className={style.nav_wrap}>
    {
        props.NavList.map((item:NavItem,index:number)=>{
-           return <div key={index} className={style.item} onClick = {  ()=>{hitory.push({pathname:'/'})} } >
+           return <div key={index} className={style.item} onClick = {  ()=>{hitory.push('/categorys',item.id)} } >
                     <div className={style.logo}>
                       <img src={item.icon_url} alt=""/>
                     </div>
