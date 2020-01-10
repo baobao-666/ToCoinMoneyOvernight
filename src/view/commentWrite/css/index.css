@@ -1,29 +1,7 @@
-.write{
+.messagel{
     width: 100%;
     height: 100%;
-}
-.comment{
-    width: 100%;
-    height: 100%;
-    border-top:1px solid #808080;
-}
-.comment div:nth-of-type(1){
-    height: 40px;
-    font-size: 12px;
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-between;
-    line-height: 40px;
-}
-.comment div:nth-of-type(1) span:nth-child(2){
-    color: #808080;
-}
-.comment div:nth-of-type(2){
-    font-size: 15px;
-    /* height: 29.6px; */
-    padding-left: 10px;
-    line-height: 29.6px;
-    color: #808080;
+    background: #eeeeee;
 }
 .header{
     width: 100%;
@@ -31,6 +9,8 @@
     line-height: 50px;
     text-align: center;
     display: flex;
+    background: #fff;
+    box-shadow:0 0  5px 0 rgba(0,0,0,0.5)
 }
 .header .left{
     width: 30px;
@@ -51,4 +31,49 @@
 .header .right{
     width: 30px;
     height: 50px;
+}
+.concent-box{
+    height: 170px;
+    background: #ffffff;
+    padding: 10px ;
+    background: #eeeeee;
+}
+.textarea{
+    width: 351.2px;
+    height: 166px;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+}
+.boxBtn{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    position: relative;
+}
+.whiteQ{
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    color: black;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 14px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+.whiteL{
+    width: 100px;
+    height: 30px;
+    background: #108ee9;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
 }
