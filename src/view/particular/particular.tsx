@@ -14,6 +14,7 @@ const Particular: React.FC<detadetType> = (props) => {
     let store = useStore()
     let { ShoppCart } = store
     // console.log(state)
+    console.log(ShoppCart.comment)
     
    useEffect(() => {
       let id=1009024
@@ -73,6 +74,7 @@ const Particular: React.FC<detadetType> = (props) => {
                 })
             }
             {
+                
                 ShoppCart.counts.map((items,i)=>{
                 return <div key={i} className={style.goodsComment}>
                     <div className={style.goodsCommentTitle}>
@@ -94,10 +96,15 @@ const Particular: React.FC<detadetType> = (props) => {
                             <div className={style.userComment}>
                                 {item.content}
                             </div>
-                            <div className={style.commentPicList}>
-                                
-                            </div>
+                            
                         </div>
+                    </div>
+                })
+            }
+            {
+                ShoppCart.pic.map((item,index)=>{
+                    return <div key={index}>
+<img src={item.pic_url} alt=""/>
                     </div>
                 })
             }

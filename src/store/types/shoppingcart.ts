@@ -15,7 +15,8 @@ export interface shopCartType{
     counter_price:number,
     count:number,
     add_time:string,
-    content:string
+    content:string,
+    pic_url:string
  
     
    
