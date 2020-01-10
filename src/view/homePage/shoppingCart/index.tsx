@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './indexs.scss'
+import './css/index.scss'
 import useStore from '../../../utils/useState'
 import { useObserver } from 'mobx-react-lite'
 import {History} from 'history'

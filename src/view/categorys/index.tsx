@@ -37,14 +37,14 @@ const Categorys: React.FC<Proptype> = (props) => {
     return useObserver(() => <>
         <div className={style.categorys_page}>
             <div className={style.header}>
-                <div className={style.left} onClick={() => { window.history.back() }}>&lt;</div>
+                <div className={`${style.left} icon iconfont icon-mjiantou-copy`} onClick={() => { window.history.back() }}></div>
                 <div className={style.title}>奇趣分类</div>
                 <div className={style.right}></div>
             </div>
             <div className={style.tabWrap}>
                 {
                     Categorys.list.map((item, index) => {
-                        return <div key={index} className={curIndex == index ? style.active : ""} onClick={() => { checkID(item.id, index) }}>{item.name}</div>
+                        return <div key={index} className={curIndex === index ? style.active : ""} onClick={() => { checkID(item.id, index) }}>{item.name}</div>
                     })
                 }
             </div>

@@ -21,6 +21,7 @@
   justify-content: center;
   align-items: center;
   font-size: 0.64rem;
+  font-weight: bold;
 }
 
 .header .right {
@@ -44,6 +45,8 @@
   display: flex;
   align-items: center;
   overflow-x: scroll;
+  background: #fff;
+  padding-bottom: 0.16rem;
 }
 
 .tabWrap > div {

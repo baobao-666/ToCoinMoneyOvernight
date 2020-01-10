@@ -41,6 +41,13 @@
       "unicode_decimal": 59320
     },
     {
+      "icon_id": "749605",
+      "name": "放大镜",
+      "font_class": "zoom",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
       "icon_id": "2326506",
       "name": "客服",
       "font_class": "kefu",
@@ -132,6 +139,13 @@
       "unicode_decimal": 58626
     },
     {
+      "icon_id": "8960875",
+      "name": "回收站",
+      "font_class": "huishouzhan",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
       "icon_id": "9063334",
       "name": "周",
       "font_class": "zhou",
@@ -149,8 +163,8 @@
       "icon_id": "10438795",
       "name": "订 单",
       "font_class": "dingdan",
-      "unicode": "e60d",
-      "unicode_decimal": 58893
+      "unicode": "e60e",
+      "unicode_decimal": 58894
     },
     {
       "icon_id": "11179056",
