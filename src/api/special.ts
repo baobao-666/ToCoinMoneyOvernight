@@ -1,17 +1,27 @@
-// import requst from '../utils/request'
-
-// class SpecialApi{
-   
-//      //获取专题数据
-//   getSpecialData = (params: any) => requst.get('/topic/list', params)
-
-// }
-
-// export default new SpecialApi()
-
 import request from '../utils/request';
 
-// 省市
+    //获取专题数据
 export let getSpecialData = (params: any)=>{
     return  request.get('/topic/list',{page:params.payload,size:params.size})
 }
+    // 专题详情
+export let getSpecialDetailDate = (params: any)=>{
+    
+    return  request.get('/topic/detail',{id:params.id});
+}
+
+    // 专题评论
+export let getCommentData = (params: any)=>{
+    console.log(params);
+    
+    return  request.get('/comment/list',params);
+}
+
+    //推荐专题
+export let getRelatedDate = (params: any)=>{
+    console.log(params);
+    
+    return  request.get('/topic/related',params);
+}  
+    
+

@@ -1,0 +1,42 @@
+.space_carousel {
+  overflow: hidden;
+}
+
+.wrap {
+  background: #fff;
+  margin-top: 0.26667rem;
+}
+
+.title {
+  width: 100%;
+  line-height: 1.33333rem;
+  text-align: center;
+  font-size: 0.42667rem;
+  font-weight: bold;
+}
+
+.img {
+  height: 5.33333rem;
+}
+
+.mess {
+  width: 100%;
+  line-height: 0.8rem;
+  font-size: 0.42667rem;
+  color: #000;
+}
+
+.span {
+  color: red;
+}
+
+.time {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 0.93333rem;
+  line-height: 0.53333rem;
+  font-size: 0.37333rem;
+  color: #666;
+}

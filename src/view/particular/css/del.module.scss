@@ -1,0 +1,284 @@
+.noTabPageContent{
+    width: 100%;
+    height: 100%;
+    // background: #f5f5f5;
+   
+}
+
+.headers{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  
+
+
+}
+.headers .left, .headers .right {
+    width:16px;
+}
+.headers .title {
+    flex: 1 1;
+    font-size: 16px;
+}
+.headers>div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner{
+    width: 100%;
+    height: 250px;
+    background: #f5f5f9;
+}
+.nav{
+    line-height: 40px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #666666;
+    background: #f4f4f4;
+
+}
+.name{
+    padding: 30px;
+    background: white;
+    margin-top: 5px;
+
+}
+.name .goodsNameTitle{
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 7px
+
+  
+}
+.name .goodsNameSubTitle{
+    font-size: 13px;
+    color: #444;
+    text-align: center;
+    padding-bottom: 15px;
+   
+}
+.name .goodsPriceTitle{
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    line-height: 15px;
+}
+.goodsSize{
+    border-top: 1px solid #f5f5f9;
+    // margin-top: 3px;
+    height: 43px;
+    padding: 0 13px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goodsSize div:nth-child(1) {
+    flex: 1 1;
+    text-align: left;
+    color: #2196f3;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+ .goodsSize div:nth-child(2) {
+    width: auto;
+    padding: 0 12px;
+    text-align: right;
+    color: red;
+    font-weight: bolder;
+    font-size: 13px;
+}
+ .goodsSize div:nth-child(3) {
+    width: auto;
+    padding: 0 10px;
+    text-align: right;
+    font-size: 14px;
+}
+ .goodsComment {
+    margin-top: 10px;
+    background: white;
+}
+.goodsComment .goodsCommentTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0 10px;
+    border-bottom: 1px solid gainsboro;
+}
+.goodsComment .goodsCommentTitle div:nth-child(1) {
+    flex: 1 1;
+    text-align: left;
+    font-size: 16px;
+}
+.goodsComment .goodsCommentTitle div:nth-child(2) {
+    width: auto;
+    text-align: right;
+    font-size: 16px;
+}
+.commentList {
+    background: white;
+    padding: 10px;
+}
+.commentList .commentItem {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: white;
+    color: gray;
+    padding-bottom: 80px;
+}
+.commentList .commentItem .userInfo {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.commentList .commentItem .userInfo div:nth-child(1) {
+    flex: 1 1;
+    color: black;
+}
+.commentList .commentItem .userInfo div:nth-child(2) {
+    width: auto;
+}
+.commentList .commentItem .userComment {
+    line-height: 30px;
+    font-size:13px;
+}
+ .goodsAttribute {
+    margin-top: 10px;
+    padding: 32px;
+    background: white;
+}
+ .goodsAttribute  {
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2196f3;
+     padding: 19px 0;
+     font-size: 15px;
+     text-align: center;
+}
+.goodsAttributeList{
+    padding: 0 15px;
+}
+ .goodsAttributeList .goodsAttributeItem {
+     display: flex;
+    align-items: center;
+    line-height: 48px;
+    background: #dcdfe6;
+    margin-top: 5px;
+}
+ .goodsAttribute .goodsAttributeList .goodsAttributeItem .attributeLabel {
+    width:80px;
+    color: gray;
+    padding: 0 10px;
+    font-size: 16px;
+    text-align: center;
+}
+ .goodsAttribute .goodsAttributeList .goodsAttributeItem .attributeContent {
+    flex: 1 1;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0 15px;
+    color: #000;
+}
+ .goodsAttributes {
+     margin-top: 10px;
+   height: 100%;
+    background: white;
+}
+.goodsAttributeLine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2196f3;
+     padding: 9px 0;
+     font-size: 15px;
+     text-align: center;
+     background: #fff;
+
+}
+.topicDetailImg{
+    margin-top: 10px;
+}
+.topicDetailImg img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.problemWrap{
+    margin-bottom: 12px;
+    
+    
+}
+.problemLabel{
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 10px;
+   
+}
+.problemLabel span{
+    color: red;
+}
+.problemContent{
+    font-size: 15px;
+    line-height: 25px;
+    color: gray;
+    padding: 0 10px;
+}
+.goodsPageDo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: white;
+    box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+.goodsPageDo .isLike, .goodsPageDo .cartNum {
+    width: 20%;
+    height: 100%;
+}
+.goodsPageDo .isLike{
+   line-height: 20px;
+   font-size: 14px;
+   text-align: center;
+   font-weight: bolder;
+}
+ .goodsPageDo .cartNum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2196f3;
+}
+ .goodsPageDo .addCart,  .goodsPageDo .payGoods {
+    width: 30%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+.goodsPageDo .addCart {
+    background: -webkit-gradient(linear, left top, right top, from(#ff9500), to(#ff5e3a));
+    background: linear-gradient(90deg, #ff9500, #ff5e3a);
+}
+.goodsPageDo .payGoods{
+    background: linear-gradient(90deg, #1d62f0, #19d5fd);
+}
+

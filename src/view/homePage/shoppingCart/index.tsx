@@ -2,12 +2,21 @@ import React, { useEffect } from 'react';
 import './css/index.scss'
 import useStore from '../../../utils/useState'
 import { useObserver } from 'mobx-react-lite'
-const ShoppCart: React.FC = () => {
+import {History} from 'history'
+interface topicType{
+  history:History
+}
+const ShoppCart: React.FC<topicType> = (props) => {
   let store = useStore()
   let { ShoppCart } = store;
   useEffect(() => {
-    ShoppCart.getShop()
-  }, [ShoppCart])
+    ShoppCart.getShop();
+   
+    
+  }, [ShoppCart]);
+  let clickFn=(id:number)=>{
+    props.history.push('/particular',id)
+  }
   return useObserver(() => (
     <div className='cart-wrap'>
       <div className='header'>
@@ -24,51 +33,60 @@ const ShoppCart: React.FC = () => {
           <span>满88元免邮费</span>
         </p>
       </div>
-      
-      {
 
-ShoppCart.list.map((item, index) => {
 
-})
-}
-    
-      
-     
-      <div className='foot'>
-       
-      <span>
-           已选(0) ￥0 
-         </span>
-         <span>
-           编辑
-         </span>
-        <button>下单</button>
+      <div className='count' >
+        {
+          ShoppCart.list.map((item, index) => {
+            return <div className='list' key={index}>
+              <div className='ck'>
+                <input type="checkbox" name="" id="" />
+              </div>
+              <div className='lefts'>
+                <img src={item.list_pic_url} alt="" onClick={()=>clickFn(item.id)}/>
+              </div>
+              <div className='center' key={index}>
+                <div>{item.goods_name}</div>
+                <div></div>
+                <div>￥{item.retail_price}</div>
+
+              </div>
+              <div className='rights'>
+                x{item.number}
+              </div>
+            </div>
+          })
+        }
       </div>
+      <div className='foot'>
+
+        <div className='ck'>
+          <input type="checkbox" name="" id="" />
+
+        </div>
+        <span>已选()</span>
+        <span> ￥</span>
+        <span>编辑</span>
+        <button>下单</button>    
+        
+     
+
+
+
+
+
+
+
+      </div>
+
+
+
     </div>
   )
 
   )
 
 }
-//       <div className='count'>
-//         <div className='list'>
-//         <div>
 
-//         </div>
-// <div className='lefts'>
-// <img src="http://yanxuan.nosdn.127.net/8392725765cdd57fdae3f173877f4bda.png" alt=""/>
-// </div>
-// <div className='center'>
-// <div>星云酥 180克/3颗</div>
-// <div></div>
-// <div>￥26</div>
-// </div>
-// <div className='rights'>
-// <div>x19</div>
-// </div>
-//       </div>
-//     </div>
-//       <div className='foot'>
-//       
 
 export default ShoppCart;

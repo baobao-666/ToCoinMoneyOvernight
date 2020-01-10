@@ -1,18 +1,22 @@
+import React from 'react';
+
 // 获取范型接口
 import { IRouterItem } from './index.d'
 
 // 一级路由
-import HomePage from '../view/homePage/index'
-import LoginPage from '../view/login/index';
+const HomePage = React.lazy(() => import('../view/homePage/index') );
+const LoginPage = React.lazy(() => import('../view/login/index') );
+const Detail = React.lazy(() => import('../view/detail/index') );
+const Particular = React.lazy(() => import('../view/particular/particular') );
+const Categorys =  React.lazy(() => import('../view/categorys') ); 
+
 
 // 二级路由
-import HomeCode from '../view/homePage/home/index'
-import ClassifyCode from '../view/homePage/classify/index'
-import MyMessingCode from '../view/homePage/myMessing/index'
-import ShoppingCartCode from '../view/homePage/shoppingCart/index'
-import SpecialCode from '../view/homePage/special/index'
-
-
+const HomeCode = React.lazy(() => import('../view/homePage/home/index') );
+const ClassifyCode = React.lazy(() => import('../view/homePage/classify/index') );
+const MyMessingCode = React.lazy(() => import('../view/homePage/myMessing/index') );
+const ShoppingCartCode = React.lazy(() => import('../view/homePage/shoppingCart/index') );
+const SpecialCode = React.lazy(() => import('../view/homePage/special/index') );
 
 
 /**
@@ -67,16 +71,32 @@ const RouterConfig:IRouterItem[]=[
     ]
    },
    {
+    type:'route',
+    path:'/detail',
+    component:Detail
+   },
+   {
+    type:'route',
+    path:'/categorys',
+    component:Categorys
+   },
+   {
     type:"route",
     path:'/login',
     component:LoginPage,
     children:[]
    },
+   {
+       type:'route',
+       path:'/particular',
+       component:Particular
+   },
     {
      type:"redirect",
      from:"/",
      to:"/homepage"
-    }
+    },
+   
 ]
 
 export default RouterConfig

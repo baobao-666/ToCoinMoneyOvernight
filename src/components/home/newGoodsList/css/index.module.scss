@@ -1,0 +1,48 @@
+  @function pxToRem($px) {
+    @return $px / 37.5px * 1rem;
+  }
+.wrap{
+    width: 100%;
+    background: #fff;
+}
+.title{
+    width: 100%;
+    height: pxToRem(40px);
+    line-height: pxToRem(40px);
+    text-align: center;
+    font-size: pxToRem(14px);
+    font-weight: bold;
+}
+.list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item{
+    width: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo{
+        width: 80%;
+        .img{
+            width: 100%;
+        }
+    }
+    .name{
+        width: 100%;
+        line-height: pxToRem(40px);
+        font-size: pxToRem(16px);
+        text-align: center;
+    }
+    .price{
+        width: 100%;
+        line-height: pxToRem(30px);
+        font-size: pxToRem(16px);
+        color: #8b55a5;
+        text-align: center;
+    }
+}

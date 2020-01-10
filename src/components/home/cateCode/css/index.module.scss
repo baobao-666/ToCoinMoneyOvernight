@@ -1,0 +1,62 @@
+  @function pxToRem($px) {
+    @return $px / 37.5px * 1rem;
+  }
+  .wrap{
+      width: 100%;
+  }
+  .title{
+      width: 100%;
+      line-height: pxToRem(50px);
+      font-size: pxToRem(16px);
+      text-align: center;
+  }
+  .conte{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .item{
+      width: 49.8%;
+      background: #fff;
+      margin-top: pxToRem(1px);
+      .logo{
+        .img{
+          width: 100%;
+        }
+      }
+      .mess{
+        .name{
+          width: 100%;
+          padding: 0 pxToRem(6px);
+          line-height: pxToRem(30px);
+          font-size: pxToRem(14px);
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+          text-align: center;
+        }
+        .price{
+          padding: 0 pxToRem(6px) ;
+          line-height: pxToRem(25px);
+          height: pxToRem(30px);
+          text-align: center;
+          font-size: pxToRem(14px);
+          color: red;
+        }
+      }
+      &:last-child{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .some{
+        font-size: pxToRem(16px);
+      }
+      .icon{
+        font-size: pxToRem(30px);
+        margin-top: pxToRem(10px);
+        color: #666;
+      }
+    }
+  }

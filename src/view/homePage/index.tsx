@@ -1,7 +1,7 @@
 import React from 'react';
 import IRouterView from '../../route/router.view';
 
-import './css/index.css'
+import style from './css/index.module.css'
 
 import FooterTab from '../../components/footertab/index';
 
@@ -29,23 +29,23 @@ const FooterList:object[]=[
         icon:'icon iconfont icon-pinpai'
     },
     {
-      path:'/homepage/myMessing',
-      text:'我的',
-      icon:'icon iconfont icon-wode'
-    },
-    {
       path:'/homepage/shoppingCart',
       text:'购物车',
       icon:'icon iconfont icon-duozhongzhifu'
+    },
+    {
+      path:'/homepage/myMessing',
+      text:'我的',
+      icon:'icon iconfont icon-wode'
     }
 ]
 
 export default (props:ItemType) => {
   return (
-    <div className="home-wrap">
-      <main>
+    <div className={style.home_wrap}>
+      <div className={style.main} >
            <IRouterView routes={props.routes} ></IRouterView>
-      </main>
+      </div>
       <FooterTab FooterList={FooterList} ></FooterTab>
     </div>
   );
