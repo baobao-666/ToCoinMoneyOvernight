@@ -34,12 +34,12 @@ export default class CreateStore{
 
    @observable
    categoryList: categoryItemType[] = []
-
+    
    @action
     async getHomeData(){
     const res:any = await getHomeData()
     console.log('====================================');
-    console.log(res);
+    // console.log(res);
     console.log('====================================');
     if(res){
       this.list = res

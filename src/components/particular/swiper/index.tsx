@@ -2,7 +2,7 @@
 
 import { Carousel, WingBlank } from 'antd-mobile';
 
-import { ItemTypes, Type } from '../../store/types/shoppingcart'
+import { ItemTypes, Type } from '../../../store/types/shoppingcart'
 
 const  LunboList:React.FC<Type> =(props)=>{
   return <WingBlank 

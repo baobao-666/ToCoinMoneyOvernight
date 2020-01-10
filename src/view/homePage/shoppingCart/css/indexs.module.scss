@@ -1,0 +1,112 @@
+.tabPageContent{
+    min-height: 100%;
+    padding-bottom: 10px;
+}
+ 
+
+ .count{
+    
+    padding: 10px 0 5px 0;
+}
+.serviceList{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .serviceList li {
+    flex: 1 1;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+}
+.serviceList li span {
+    color: red;
+    margin: 10px;
+    font-size: 5px;
+}
+ .cartGoodsListWrap .cartGoodsItem {
+    display: flex;
+    height: 100px;
+    padding: 25px;
+    padding-left: 0;
+    background: white;
+    margin-top: 1px;
+}
+ .cartGoodsListWrap .cartGoodsItem .isCheckItem img {
+    width: 38px;
+    height: auto;
+}
+ .cartGoodsListWrap .cartGoodsItem .goodsImg {
+    width: 90px;
+    background: #f4f4f4;
+}
+ .cartGoodsListWrap .cartGoodsItem .goodsImg img {
+    width: 100%;
+    height: 100px;
+}
+ .cartGoodsListWrap .cartGoodsItem .cartGoodsMsg {
+    flex: 1 1;
+    padding: 0 10px;
+    min-width: 0;
+}
+ .cartGoodsListWrap .cartGoodsItem .cartGoodsMsg div {
+    height: 33.333%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cartGoodsListWrap .cartGoodsItem .cartGoodsMsg div:nth-child(3) {
+color: red;
+}
+ .cartGoodsListWrap .cartGoodsItem .cartGoodsNum {
+    width: auto;
+    font-size: 16px;
+}
+ .cartGoodsDo {
+    position: fixed;
+    bottom: 50px;
+    height: 50px;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+ .cartGoodsDo .cartMsgAll {
+    flex: 1 1;
+    line-height: 50px;
+    font-size: 14px;
+}
+ .cartGoodsDo .cartAllDoButton {
+    width: auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+ .cartGoodsDo .cartAllDoButtonpay {
+    background: #ab2b2b;
+    color: white;
+    padding: 0;
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    
+}
+ .cartGoodsDo div {
+    height: 100%;
+}
+
