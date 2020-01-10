@@ -13,4 +13,22 @@ export const getFendateId = (params:object) => requst.get('/catalog/current',par
 
 export const getFendateNav = (params:any) => requst.get(`/goods/category?id=${params}`)
 
+
+// 根据分类Id或者制造商Id获取商品
+
 export const getFendateBox = (params:any) => requst.get(`/goods/list?page=${params.page}&size=${params.size}&categoryId=${params.categoryId}`)
+
+
+// 获取商品查询的相关信息
+
+export const getFendateQuery = () => requst.get('/search/index')
+
+
+//商品查询模糊查询关键字
+
+export const getFendateDim = (params:any) => requst.get('/search/helper',{keyword:params})
+
+
+// 删除商品查询的历史记录
+
+export const getFendateClear = () => requst.get('/search/clearhistory')

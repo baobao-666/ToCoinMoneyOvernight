@@ -6,6 +6,8 @@ import * as Router from "react-router-dom"
 import './config/rem'
 import 'antd-mobile/dist/antd-mobile.css'
 
+import './static/icon/iconfont.css'
+
 import StoreContext  from  './context/index'
 import store from './store/index'
 import './static/icon/iconfont.css'

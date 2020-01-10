@@ -10,9 +10,12 @@ const Detail = React.lazy(() => import('../view/detail/index'));
 const CommentWrite = React.lazy(() => import('../view/commentWrite/index'));
 const Particular = React.lazy(() => import('../view/particular/particular'));
 const Categorys = React.lazy(() => import('../view/categorys/index'));
-const Address = React.lazy(() => import('../view/address/index') );
-const ShoppCollects = React.lazy(() => import('../view/shoppCollects/index') );
+const Address = React.lazy(() => import('../view/address/index'));
+const ShoppCollects = React.lazy(() => import('../view/shoppCollects/index'));
 const MoreComment = React.lazy(() => import('../view/moreComment/index'))
+// eslint-disable-next-line no-redeclare
+const GoodsSearch = React.lazy(() => import('../view/goodsSearch'))
+
 
 // 二级路由
 const HomeCode = React.lazy(() => import('../view/homePage/home/index'));
@@ -90,9 +93,17 @@ const RouterConfig: IRouterItem[] = [
         component: MoreComment
     },
     {
-        type:'route',
-        path:'/commentWrite',
-        component:CommentWrite
+        type: 'route',
+        path: '/commentWrite',
+        component: CommentWrite
+
+    },
+    {
+        type: 'route',
+        path: '/goodsSearch',
+        component: GoodsSearch
+
+
     },
     {
         type: "route",

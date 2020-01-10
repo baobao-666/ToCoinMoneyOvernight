@@ -5,8 +5,10 @@ import ShoppCart from './modules/shoppingcart';
 import Special from './modules/special';
 import Categorys from './modules/categorys';
 import AddRess from './modules/address'
+import GoodsSearch from './modules/goodsSearch'
 
 export default {
+    GoodsSearch: new GoodsSearch(),
     Categorys: new Categorys(),
     Home: new Home(),
     ClassFiy: new ClassFiy(),

@@ -23,6 +23,7 @@
         justify-content: center;
         align-items: center;
         font-size: pxToRem(24px);
+        font-weight: bold;
     }
     .right{
         flex: 2;
@@ -44,7 +45,8 @@
     display: flex;
     align-items: center;
     overflow-x: scroll;
-    // margin-bottom: pxToRem(5px);
+    background: #fff;
+    padding-bottom: pxToRem(6px);
     &>div{
         width: pxToRem(70px);
         padding: 0 pxToRem(10px);
