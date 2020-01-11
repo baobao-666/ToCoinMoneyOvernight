@@ -51,7 +51,7 @@ const ShoppCart: React.FC<topicType> = (props) => {
             <div className={style.cartGoodsListWrap} >
               <div className={style.cartGoodsItem}>
                 <div className={style.isCheckItem}>
-                  <img src='' alt="" />
+                  <i className='icon iconfont icon-duihao'></i>
                 </div>
                 <div className={style.goodsImg}>
                   <img src={item.list_pic_url} alt="" onClick={() => clickFn(item.id)} />
@@ -75,7 +75,7 @@ const ShoppCart: React.FC<topicType> = (props) => {
         ShoppCart.total.map((item, i) => {
           return <div className={style.cartGoodsDo} key={i}>
             <div className={style.isCheckItem}>
-
+            <i className='icon iconfont icon-duihao'></i>
             </div>
             <div className={style.cartMsgAll}>
               已选({item.goodsCount})

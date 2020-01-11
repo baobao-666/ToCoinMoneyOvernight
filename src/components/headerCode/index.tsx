@@ -6,7 +6,8 @@ import { useHistory  } from 'react-router-dom'
 
 interface headerType {
     title?:string
-    icons?:boolean
+    icons?:boolean,
+    
 
 }
 

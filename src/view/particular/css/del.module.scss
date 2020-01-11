@@ -240,19 +240,24 @@
 .goodsPageDo .isLike, .goodsPageDo .cartNum {
     width: 20%;
     height: 100%;
+   
 }
-.goodsPageDo .isLike{
-   line-height: 20px;
-   font-size: 14px;
+.goodsPageDo .isLike i{
+   line-height: 50px;
+   font-size: 20px;
    text-align: center;
    font-weight: bolder;
+   padding: 0 25px;
 }
- .goodsPageDo .cartNum {
+ .goodsPageDo .cartNum i{
     display: flex;
     justify-content: center;
     align-items: center;
     color: #2196f3;
-}
+    line-height: 50px;
+   font-size: 25px;
+ }
+
  .goodsPageDo .addCart,  .goodsPageDo .payGoods {
     width: 30%;
     height: 100%;
@@ -299,7 +304,7 @@
     background: white;
     height: auto;
     padding: 20px;
-    position: relative;
+     position: relative;
 }
 .goodsList .goodsItem .goodsItemImg {
     width: 100%;

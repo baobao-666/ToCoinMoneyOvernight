@@ -3,8 +3,6 @@ import { useObserver } from 'mobx-react-lite'
 import useStore from '../../utils/useState'
 import style from './css/del.module.scss'
 import { History } from 'history'
-
-
 import Lunbolist from '../../components/particular/swiper/index';
 
 interface detadetType {
@@ -15,17 +13,16 @@ const Particular: React.FC<detadetType> = (props) => {
      let {state}=props.location as {state?:any}
     let store = useStore()
     let { ShoppCart } = store
-    // console.log(state)
-    //   console.log(ShoppCart.getList)
+    //  console.log(state)
+    //    console.log(ShoppCart.getList)
 
     useEffect(() => {
-        // let id = 1070000
-        ShoppCart.getDet({ id:state })
-        ShoppCart.getData({ id:state })
+      ShoppCart.getDet({ id:state })
+      ShoppCart.getData({ id:state })
 
     }, [ShoppCart])
     let goFn = () => {
-        props.history.push('/homepage/shoppingCart')
+        props.history.goBack()
     }
 
     return useObserver(() => (
@@ -34,7 +31,7 @@ const Particular: React.FC<detadetType> = (props) => {
                 ShoppCart.det.map((item, index) => {
                     return <div className='noTabPageContent' key={index}>
                         <div className={style.headers}>
-                            <div className={style.left} onClick={() => goFn()}></div>
+                            <div className={style.left} onClick={() => goFn()}><i className='icon iconfont icon-mjiantou-copy'></i></div>
                             <div className={style.title}>{item.name}</div>
                             <div className={style.right}></div>
                         </div>
@@ -85,34 +82,7 @@ const Particular: React.FC<detadetType> = (props) => {
 
                 })
             }
-            {
-
-                ShoppCart.counts.map((items, i) => {
-                    return <div key={i} className={style.goodsComment}>
-                        <div className={style.goodsCommentTitle}>
-                            <div>评论({items.count})</div>
-                            <div>查看全部></div>
-                        </div>
-
-                    </div>
-                })
-            }
-            {
-                ShoppCart.comment.map((item, index) => {
-                    return <div key={index} className={style.commentList}>
-                        <div className={style.commentItem}>
-                            <div className={style.userInfo}>
-                                <div>匿名用户</div>
-                                <div>{item.add_time}</div>
-                            </div>
-                            <div className={style.userComment}>
-                                {item.content}
-                            </div>
-
-                        </div>
-                    </div>
-                })
-            }
+            
             {
                 ShoppCart.pic.map((item, index) => {
                     return <div key={index}>
@@ -169,7 +139,8 @@ const Particular: React.FC<detadetType> = (props) => {
                     <div className={style.goodsList}>
                     {
                         ShoppCart.getList.map((items, value) => {
-                            return    <div className={style.goodsList} key={value}>
+                            console.log(items)
+                            return   <div className={style.goodsList} key={value}>
                                     <div className={style.goodsItem}>
                                         <div className={style.goodsItemImg}>
                                             <img src={items.list_pic_url} alt="" />
@@ -191,8 +162,9 @@ const Particular: React.FC<detadetType> = (props) => {
  </div>
 
                 <div className={style.goodsPageDo}>
-                    <div className={style.isLike}></div>
-                    <div className={style.cartNum}></div>
+                    <div className={style.isLike}><i className='icon iconfont icon-collect'></i></div>
+                    <div className={style.cartNum}><i className='icon iconfont icon-qicheqianlian-
+'></i></div>
                     <div className={style.addCart}>加入购物车</div>
                     <div className={style.payGoods}>立即购买</div>
                 </div>
