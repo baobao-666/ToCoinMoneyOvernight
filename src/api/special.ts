@@ -12,14 +12,12 @@ export let getSpecialDetailDate = (params: any)=>{
 
     // 专题评论
 export let getCommentData = (params: any)=>{
-    console.log(params);
     
     return  request.get('/comment/list',params);
 }
 
     //推荐专题
 export let getRelatedDate = (params: any)=>{
-    console.log(params);
     
     return  request.get('/topic/related',params);
 }  
