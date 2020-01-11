@@ -109,6 +109,9 @@
                 align-items: center;
                 margin-bottom: pxToRem(5px);
                 // box-shadow: pxToRem(1px) pxToRem(1px) pxToRem(2px) #ccc;
+                i{
+                    font-size: pxToRem(18px);
+                }
             }
             .listWrap{
                 display: flex;

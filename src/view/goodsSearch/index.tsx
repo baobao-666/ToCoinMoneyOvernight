@@ -53,7 +53,7 @@ const GoodsSearch: React.FC = () => {
                         <div className={style.searchItemWrap}>
                             <div className={style.title}>
                                 <span>历史记录</span>
-                                <i className="icon iconfont icon-huishouzhan" onClick={()=>{Clear()}}></i>
+                                <i className="icon iconfont icon-huishouzhan" onClick={() => { Clear() }}></i>
                             </div>
                             <div className={style.listWrap}>
                                 {

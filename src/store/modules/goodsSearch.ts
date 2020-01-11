@@ -43,6 +43,7 @@ export default class CreateStore {
     async getFendateClear() {
         let res: any = await getFendateClear()
         console.log(res)
+        this.historyKeywordList = res
     }
 }
     

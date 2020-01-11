@@ -125,6 +125,10 @@
   margin-bottom: 0.13333rem;
 }
 
+.searchGoods .goodsList .searchItemWrap .title i {
+  font-size: 0.48rem;
+}
+
 .searchGoods .goodsList .searchItemWrap .listWrap {
   display: flex;
   align-items: center;

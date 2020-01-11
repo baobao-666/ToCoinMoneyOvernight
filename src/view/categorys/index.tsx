@@ -7,7 +7,7 @@ import { History, Location } from 'history'
 import { categorysType } from '../../store/types/categorys'
 
 interface Proptype {
-    histtory: History
+    history: History
     location: Location
     id: number
 }
@@ -34,6 +34,11 @@ const Categorys: React.FC<Proptype> = (props) => {
         setCurincex(index)
     }
 
+    let JumpFor = (DetailId:number) => {
+            console.log(DetailId)
+            props.history.push({ pathname: '/particular', state: DetailId })
+    }
+
     return useObserver(() => <>
         <div className={style.categorys_page}>
             <div className={style.header}>
@@ -55,7 +60,7 @@ const Categorys: React.FC<Proptype> = (props) => {
             <div className={style.goodsList}>
                 {
                     Categorys.goodsList.map((item: any, index: number) => {
-                        return <a key={index} className={style.goodsItem} >
+                        return <a key={index} className={style.goodsItem}  onClick={()=>{JumpFor(item.id)}}>
                             <img src={item.list_pic_url} className={style.goodsItemImg}></img>
                             <div className={style.goodsItemName}>{item.name}</div>
                             <div className={style.goodsItemPrice}>￥{item.retail_price}元</div>
