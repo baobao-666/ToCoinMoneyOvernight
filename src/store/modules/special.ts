@@ -6,7 +6,8 @@ import {
     getSpecialData,         // 专题数据
     getSpecialDetailDate,   // 专题详情
     getCommentData,         // 专题评论
-    getRelatedDate          // 推荐专题
+    getRelatedDate,          // 推荐专题
+    addCommentData          //  添加评论
 } from '../../api/special'
 
 
@@ -46,6 +47,12 @@ export default class CreateStore{
     async getRelatedDate(obj:Object){
         const res:any =await getRelatedDate(obj);
         this.relatedDate=res;
+    }
+
+    @action
+    async addCommentData(obj:Object){
+        const res:any = await addCommentData(obj);
+        console.log(res,'add评论');
     }
 
     

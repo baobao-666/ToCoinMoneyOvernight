@@ -12,24 +12,30 @@ interface PropeType {
 }
 
 let Liuyan: React.FC<PropeType> = (props: any) => {
+    const {state} = props.location as {state?:any};
     let store = useStore();
     let {Special} = store;
-    useEffect(()=>{
-
-    },[Special])
+    //input方法
+    let [tag,setTag] =useState('');
      // 放回上一级
      let changeProv=()=>{
         props.history.goBack()
     }
     
     // 输入
-    let [tag,setTag] =useState('');
     let inputText = (e:any) => {
         setTag(e.target.value);
     }
     // 清空
     let closekOng=()=>{
         setTag('')
+    }
+
+    // 留言
+    let leaveMessage=()=>{
+        Special.addCommentData({content:tag,typeId:1,valueId:state});
+        alert('添加成功！!');
+        props.history.goBack()
     }
     return useObserver(() => (
         <div className="messagel">
@@ -44,7 +50,7 @@ let Liuyan: React.FC<PropeType> = (props: any) => {
                 </div>
                 <div className="boxBtn">
                 { tag.length?<button className="whiteQ" onClick={closekOng}>清空</button>:''}
-                <button className="whiteL">留言</button>
+                <button className="whiteL" onClick={leaveMessage}>留言</button>
                 </div>
         </div>
     ))

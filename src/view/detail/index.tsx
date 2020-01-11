@@ -40,7 +40,7 @@ const Detail:React.FC<detailType> =(props)=>{
     
     // 留言
     let leave=()=>{
-        props.history.push('/commentWrite');
+        props.history.push('/commentWrite',state);
     }
     return useObserver(()=>(
         <div className='detail'>

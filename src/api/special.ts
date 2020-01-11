@@ -21,5 +21,12 @@ export let getRelatedDate = (params: any)=>{
     
     return  request.get('/topic/related',params);
 }  
+
+ // 添加评论
+ export let addCommentData = (data: any)=>{
+    console.log(data);
+    
+    return  request.post('/comment/post',data);
+} 
     
 
