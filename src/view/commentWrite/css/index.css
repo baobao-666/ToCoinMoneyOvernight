@@ -37,6 +37,7 @@
     background: #ffffff;
     padding: 10px ;
     background: #eeeeee;
+    position: relative;
 }
 .textarea{
     width: 351.2px;
@@ -44,6 +45,17 @@
     border: 0;
     outline: none;
     font-size: 15px;
+}
+.concent-p2{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
+    color: #808080;
 }
 .boxBtn{
     width: 100%;

@@ -42,11 +42,10 @@ let Liuyan: React.FC<PropeType> = (props: any) => {
             <div className='header'>
                         <div className="left" onClick={()=>changeProv()}><i className='iconfont icon-mjiantou-copy'></i></div>
                         <div className="title">填写留言</div>
-                        <div className="right"></div>
                     </div>
                 <div className="concent-box">
                     <textarea className="textarea" value={tag} onChange={(e)=>inputText(e)}></textarea>
-                    {/* <p className="concent-p2"><span>0</span>/<span>80</span></p> */}
+                    <p className="concent-p2"><span>{tag.length}</span>/<span>80</span></p>
                 </div>
                 <div className="boxBtn">
                 { tag.length?<button className="whiteQ" onClick={closekOng}>清空</button>:''}
