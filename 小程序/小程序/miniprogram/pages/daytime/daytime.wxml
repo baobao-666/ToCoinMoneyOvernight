@@ -1,0 +1,21 @@
+<view class="wrap">
+  <text class="header">时间差计算器</text>
+  <text class="title"> 时间差计算器</text>
+  <view class="from">
+    <text class="from_title">日期与日期间的相隔时间</text>
+    <view class="time">
+      <picker mode="date" class="butt" bindchange="startchang">
+        开始日期：
+      </picker>
+      <text>{{start}}</text>
+    </view>
+    <view class="time">
+      <picker mode="date" class="butt"   bindchange="endchang">
+        结束日期：
+      </picker>
+      <text>{{end}}</text>
+    </view>
+    <view wx:if="{{flag}}" class="submits"   size="default" type="primary"> 计算 </view>
+    <view wx:else class="submit"  bindtap="calculate" size="default" type="primary"> {{differenceday}} </view>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="wrap" >
+ <image  wx:for="{{list}}" wx:key="index" lazy-load="true" src="{{item}}" ></image>
+</view>
