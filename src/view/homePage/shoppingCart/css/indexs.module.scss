@@ -1,116 +1,218 @@
-.tabPageContent{
-    min-height: 100%;
-    padding-bottom: 10px;
-}
+
+/* 
+  购物车排版
+*/
+.cart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #eee;
  
-
- .count{
-    
-    padding: 10px 0 5px 0;
-}
-.serviceList{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 30px;
-    background: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
- .serviceList li {
-    flex: 1 1;
-    color: #666;
-    font-size: 12px;
-    text-align: center;
-}
-.serviceList li span {
-    color: red;
-    margin: 10px;
-    font-size: 5px;
-}
- .cartGoodsListWrap .cartGoodsItem {
-    display: flex;
-    height: 90px;
-    padding: 25px;
-    padding-left: 10px;
-    background: white;
-    margin-top: 1px;
-}
-  .isCheckItem i {
-    width: 150px;
-     height:50px;
-     line-height: 50px;
-      padding: 0 5px;
-      color: #ab2b2b;
-}
- .cartGoodsListWrap .cartGoodsItem .goodsImg {
-    width: 90px;
-    background: #f4f4f4;
-    // padding-left: 15px;
-}
- .cartGoodsListWrap .cartGoodsItem .goodsImg img {
-    width: 100%;
-    height: 100px;
-}
- .cartGoodsListWrap .cartGoodsItem .cartGoodsMsg {
-    flex: 1 1;
-    padding: 0 10px;
-    min-width: 0;
-}
- .cartGoodsListWrap .cartGoodsItem .cartGoodsMsg div {
-    height: 33.333%;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.cartGoodsListWrap .cartGoodsItem .cartGoodsMsg div:nth-child(3) {
-color: red;
-}
- .cartGoodsListWrap .cartGoodsItem .cartGoodsNum {
-    width: auto;
-    font-size: 16px;
-}
- .cartGoodsDo {
-    position: fixed;
-    bottom: 50px;
-    height: 50px;
-    left: 0;
-    width: 100%;
-    background: white;
-    display: flex;
-    box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
- .cartGoodsDo .cartMsgAll {
-    flex: 1 1;
-    line-height: 50px;
-    font-size: 14px;
-}
- .cartGoodsDo .cartAllDoButton {
-    width: auto;
-    padding: 0 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-}
- .cartGoodsDo .cartAllDoButtonpay {
-    background: #ab2b2b;
-    color: white;
-    padding: 0;
-    width: 120px;
-    height: 50px;
-    font-size: 16px;
-    text-align: center;
-    line-height: 50px;
-    
-}
- .cartGoodsDo div {
-    height: 100%;
 }
 
+.cartHead {
+  width: 100%;
+  height: 43px;
+  display: flex;
+  background: #f4f4f4;
+}
+
+.cartHead p {
+  flex: 1;
+  font-size: 12px;
+  text-align: center;
+  line-height: 43px;
+}
+
+.cartHead p span {
+  color: red;
+  padding-right: 5px;
+}
+
+.cartMain {
+  width: 100%;
+  height: auto;
+}
+
+.ListItem {
+  width: 100%;
+  height: 90px;
+  background: #fff;
+  display: flex;
+  padding: 10px 0;
+}
+
+.isCheckItem {
+  width: 44px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isCheckItem img {
+  width: 20px;
+  height: 20px;
+}
+
+.Item {
+  width: 90px;
+background: #f4f4f4;
+}
+
+.Item img {
+    width: 100%;
+    height: 85px;
+}
+
+.commodity {
+  flex: 1;
+  height: 100%;
+  display: flex;
+}
+
+.ItemMsg {
+  width: 241px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+
+.ItemMsg div {
+  flex: 1;
+}
+
+.ItemMsg div:first-child {
+  font-size: 14px;
+}
+
+.ItemMsg div:last-child {
+  color: red;
+  font-size: 14px;
+}
+
+.ItemNum {
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.selected {
+  width: 255px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.selects {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.countOp {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color {
+  color: red;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.num {
+  margin: auto 0;
+  display: flex;
+}
+
+.num div {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 33px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.num div:nth-child(2) {
+  width: 50px;
+  border-left: none;
+  border-right: none;
+}
+
+.cartFooter {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  height: 61px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 45px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img {
+  width: 20px;
+  height: 20px;
+}
+
+.select {
+  width: 138px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.select p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.editor {
+  width: 88px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.place {
+  flex: 1;
+  height: 100%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 16px;
+  background: #ab2b2b;
+  color: #fff;
+}
+
+.trade {
+  width: 100%;
+  height: 61px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.delete {
+  width: 100%;
+  height: 61px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}

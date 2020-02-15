@@ -1,8 +1,8 @@
- import React  from 'react'
+import React  from 'react'
 
-import { Carousel, WingBlank } from 'antd-mobile';
+ import { Carousel, WingBlank } from 'antd-mobile';
+ import { ItemTypes, Type } from '../../store/types/particular'
 
-import { ItemTypes, Type } from '../../../store/types/shoppingcart'
 
 const  LunboList:React.FC<Type> =(props)=>{
   return <WingBlank 
@@ -36,3 +36,5 @@ const  LunboList:React.FC<Type> =(props)=>{
 }
 
 export default LunboList
+
+

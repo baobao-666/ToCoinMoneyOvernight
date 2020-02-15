@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useObserver } from 'mobx-react-lite'
 import useStore from '../../utils/useState'
-import style from './css/del.module.scss'
+import style from './index.module.scss'
 import { History } from 'history'
-import Lunbolist from '../../components/particular/swiper/index';
+import Lunbolist from '../../components/swiper/index';
 
 interface detadetType {
     location: Location
@@ -12,15 +12,14 @@ interface detadetType {
 const Particular: React.FC<detadetType> = (props) => {
      let {state}=props.location as {state?:any}
     let store = useStore()
-    let { ShoppCart } = store
-    //  console.log(state)
-    //    console.log(ShoppCart.getList)
+    let { Particular } = store
+   
 
-    useEffect(() => {
-      ShoppCart.getDet({ id:state })
-      ShoppCart.getData({ id:state })
+     useEffect(() => {
+        Particular.getDet({ id:state })
+    
 
-    }, [ShoppCart])
+    }, [Particular])
     let goFn = () => {
         props.history.goBack()
     }
@@ -28,14 +27,14 @@ const Particular: React.FC<detadetType> = (props) => {
     return useObserver(() => (
         <div className={style.noTabPageContent}>
             {
-                ShoppCart.det.map((item, index) => {
+                Particular.det.map((item, index) => {
                     return <div className='noTabPageContent' key={index}>
                         <div className={style.headers}>
                             <div className={style.left} onClick={() => goFn()}><i className='icon iconfont icon-mjiantou-copy'></i></div>
                             <div className={style.title}>{item.name}</div>
                             <div className={style.right}></div>
                         </div>
-                        <Lunbolist Lunbolist={ShoppCart.Lunbolist}></Lunbolist>
+                        <Lunbolist Lunbolist={Particular.Lunbolist}></Lunbolist>
 
                         <div className={style.serviceList}>
                             <ul>
@@ -84,7 +83,7 @@ const Particular: React.FC<detadetType> = (props) => {
             }
             
             {
-                ShoppCart.pic.map((item, index) => {
+                Particular.pic.map((item, index) => {
                     return <div key={index}>
 
                     </div>
@@ -96,7 +95,7 @@ const Particular: React.FC<detadetType> = (props) => {
             <div className={style.goodsAttribute} >
                 <div className={style.goodsAttributeLine}>—— 商品参数 ——</div>
                 {
-                    ShoppCart.attribute.map((it, indexs) => {
+                    Particular.attribute.map((it, indexs) => {
                         return <div className={style.goodsAttributeList} key={indexs}>
                             <div className={style.goodsAttributeItem}>
                                 <div className={style.attributeLabel}>{it.name}</div>
@@ -107,7 +106,7 @@ const Particular: React.FC<detadetType> = (props) => {
                     })
                 }
                 {
-                    ShoppCart.det.map((item, index) => {
+                    Particular.det.map((item, index) => {
                         return <div dangerouslySetInnerHTML={{ __html: item.goods_desc }} key={index} className={style.topicDetailImg} />
                     })
                 }
@@ -120,7 +119,7 @@ const Particular: React.FC<detadetType> = (props) => {
 
 
                 {
-                    ShoppCart.data.map((ite, i) => {
+                    Particular.data.map((ite, i) => {
                         return <div className={style.problemWrap} key={i}>
                             <div className={style.problemLabel}>
                                 <span>√</span>
@@ -138,8 +137,8 @@ const Particular: React.FC<detadetType> = (props) => {
                  </div>
                     <div className={style.goodsList}>
                     {
-                        ShoppCart.getList.map((items, value) => {
-                            console.log(items)
+                        Particular.getList.map((items, value) => {
+                            // console.log(items)
                             return   <div className={style.goodsList} key={value}>
                                     <div className={style.goodsItem}>
                                         <div className={style.goodsItemImg}>
@@ -177,5 +176,4 @@ const Particular: React.FC<detadetType> = (props) => {
 
     ))
 }
-
 export default Particular

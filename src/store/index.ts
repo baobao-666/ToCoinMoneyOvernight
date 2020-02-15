@@ -6,6 +6,7 @@ import Special from './modules/special';
 import Categorys from './modules/categorys';
 import AddRess from './modules/address'
 import GoodsSearch from './modules/goodsSearch'
+import Particular from './modules/particular'
 
 export default {
     GoodsSearch: new GoodsSearch(),
@@ -15,5 +16,6 @@ export default {
     ShoppCollects: new ShoppCollects(),
     ShoppCart: new ShoppCart(),
     Special: new Special(),
-    AddRess: new AddRess()
+    AddRess: new AddRess(),
+    Particular:new Particular()
 }
