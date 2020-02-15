@@ -25,6 +25,7 @@ const GoodsSearch: React.FC = () => {
         GoodsSearch.getFendateClear()
 
     }
+
     return useObserver(() => <>
         <div className={style.goodsSearch_wrap}>
             <div className={style.noTabPageContent}>
@@ -57,9 +58,9 @@ const GoodsSearch: React.FC = () => {
                             </div>
                             <div className={style.listWrap}>
                                 {
-                                    GoodsSearch.historyKeywordList.map((item, index) => {
+                                    GoodsSearch.historyKeywordList.length > 0 ? GoodsSearch.historyKeywordList.map((item, index) => {
                                         return <span key={index}>{item}</span>
-                                    })
+                                    }):null
                                 }
                             </div>
                         </div>
