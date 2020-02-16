@@ -1,0 +1,15 @@
+<!--pages/time/time.wxml-->
+<view class="wrap">
+  <view class="title">计算器</view>
+  <view class="row">
+    <text>开始时间:</text>
+    <picker mode="date" fields="day" start="numDate" bindchange="changeStart"><text>{{start}}</text></picker>
+  </view>
+  <view>
+    <view class="row">
+      <text>结束时间:</text>
+      <picker mode="date" fields="day" end="numDate" bindchange="changeEnd"><text>{{end}}</text></picker>
+    </view>
+  </view>
+  <view>总共距离：{{sum}}天</view>
+</view>

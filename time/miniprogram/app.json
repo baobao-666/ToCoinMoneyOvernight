@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/time/time"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "gray",
+    "selectedColor": "red",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "寿命"
+      },
+      {
+        "pagePath": "pages/time/time",
+        "text": "时间"
+      }
+    ]
+  }
+}
