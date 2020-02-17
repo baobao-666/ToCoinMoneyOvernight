@@ -1,0 +1,68 @@
+<!--pages/add/add.wxml-->
+<view class="wrap">
+<view class="header">
+<input type="text" placeholder="输入你的习惯" placeholder-class="placeholderStyle">
+
+</input>
+<view class="chuang">创建</view>
+<view class="pi">批量导入</view>
+
+</view>
+<!--  -->
+<view class="con">
+<view class="cons">
+<text>体验一次VR</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>看完豆瓣电影TOP250</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>去天安门看一次升旗</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>去现场听一次传统戏曲</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>录制一期电台</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>一个月读完四本书</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>看一次画展</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>坐一次过山车</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>和爱的人坐一次摩天轮</text>
+<text>+</text>
+
+</view>
+</view>
+
+</view>

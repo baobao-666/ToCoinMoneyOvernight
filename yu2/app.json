@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/guang/guang",
+    "pages/tong/tong",
+    "pages/my/my",
+    "pages/add/add",
+    "pages/xi/xi"
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "有爱清单",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"清单"
+      },
+      {
+        "pagePath": "pages/guang/guang",
+        "text": "广场"
+      },
+      {
+        "pagePath": "pages/tong/tong",
+        "text": "通知"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我"
+      }
+    ]
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

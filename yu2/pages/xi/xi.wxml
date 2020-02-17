@@ -1,0 +1,70 @@
+<!--pages/xi/xi.wxml-->
+<!--pages/add/add.wxml-->
+<view class="wrap">
+<view class="header">
+<input type="text" placeholder="输入你的目标" placeholder-class="placeholderStyle">
+
+</input>
+<view class="chuang">创建</view>
+
+
+</view>
+<!--  -->
+<view class="con">
+<view class="cons">
+<text>看书一小时</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>看TED</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>每天阅读一篇英语文章</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>练习外语听力</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>求人不如求己</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>今日事，今日毕</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>拒绝拖延症</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>每天看新闻</text>
+<text>+</text>
+
+</view>
+<!--  -->
+<view class="cons">
+<text>学英语</text>
+<text>+</text>
+
+</view>
+</view>
+
+</view>
+

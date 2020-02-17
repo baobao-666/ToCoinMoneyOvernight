@@ -1,0 +1,52 @@
+/**index.wxss**/
+.tab{
+  width: 100%;
+  position: relative;
+
+   }
+
+.tab .btns{
+   height: 120rpx;
+ background: #fff;
+ display: flex;
+ 
+ }
+
+.tab .btns view{
+  flex: 1; 
+text-align: center; 
+line-height:120rpx;
+border-bottom:2rpx solid #f5f5f5;
+}
+.active{
+  color: red
+}
+.cons .text{
+  width: 90%;
+  height: 90rpx;
+  background-color: #f6f7f9;
+ border-radius: 5px;
+ margin-top: 20rpx;
+
+  
+}
+.cons .text text{
+ line-height: 90rpx;
+ padding: 0 30rpx;
+ font-size: 30rpx
+ 
+  
+}
+.button{
+  position: absolute;
+  left: 50%;
+  top: 800rpx;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  border:1px solid #ccc;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 50rpx;
+  color: #ccc;
+}

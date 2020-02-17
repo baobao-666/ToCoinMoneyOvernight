@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="tab">
+<!-- //导航 -->
+  <view class="btns">
+  <view wx:for="{{btns}}" class="{{index==active?'cur':''}}"  data-inde="{{index}}" bindtap="toggle">
+  {{item}}
+  </view>
+  </view>
+  <!-- 内容 -->
+  <view class="cons">
+  <view class="text">
+  <text>1</text>
+  <text>看一场私人电影</text>
+  </view>
+<!--  -->
+  <view class="text">
+  <text>2</text>
+  <text>玩一次保龄球</text>
+  </view>
+  
+  <!--  -->
+  <view class="text">
+  <text>3</text>
+  <text>玩一次射箭</text>
+  </view>
+  <!--  -->
+  <view class="text">
+  <text>4</text>
+  <text>练出几首自己的经典曲目</text>
+  </view>
+  <!--  -->
+  <view class="text">
+  <text>5</text>
+  <text>在大众广众之下演讲一次</text>
+  </view>
+  </view>
+ <navigator class="button" url="/pages/add/add">
++
+ </navigator>
+
+</view>
