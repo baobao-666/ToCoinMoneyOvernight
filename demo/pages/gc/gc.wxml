@@ -1,0 +1,7 @@
+<!--pages/gc/gc.wxml-->
+<view class="wrap">
+    <view class="header">
+      <text>hellow,这里是广场</text>
+    </view>
+    <view class="main"></view>
+</view>

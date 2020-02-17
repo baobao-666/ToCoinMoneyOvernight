@@ -1,0 +1,7 @@
+<!--pages/gc/gc.wxml-->
+<view class="wrap">
+    <view class="header">
+      <text>hellow,我的</text>
+    </view>
+    <view class="main"></view>
+</view>
