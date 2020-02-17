@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/inventory/inventory",
+    "pages/square/squre",
+    "pages/inform/inform",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#1afa29",
+    "list": [
+      {
+        "pagePath": "pages/inventory/inventory",
+        "text": "清单",
+        "iconPath":"./static/img/liebiao.png",
+        "selectedIconPath":"./static/img/liebiao1.png"
+      },
+      {
+        "pagePath": "pages/square/squre",
+        "text": "广场",
+        "iconPath": "./static/img/iconset0456.png",
+        "selectedIconPath": "./static/img/iconset04561.png"
+      },
+      {
+        "pagePath": "pages/inform/inform",
+        "text": "通知",
+        "iconPath": "./static/img/xiaoxitongzhitixinglingshenglingdang.png",
+        "selectedIconPath": "./static/img/xiaoxitongzhitixinglingshenglingdang1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./static/img/wodedangxuan.png",
+        "selectedIconPath": "./static/img/wodedangxuan1.png"
+      }
+    ]
+   }
+}

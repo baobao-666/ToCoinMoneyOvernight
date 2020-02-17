@@ -1,0 +1,14 @@
+<!--pages/inventory/inventory.wxml-->
+<view class="header">
+  <view>
+    <text> 目标  </text>
+
+  </view>
+  <view>
+    <text> 习惯 </text>
+
+  </view>
+  <view>
+    <text> 手记  </text>
+  </view>
+</view>
