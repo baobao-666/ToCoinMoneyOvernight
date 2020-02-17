@@ -4,8 +4,9 @@ import { Provider } from '@tarojs/redux'
 import Index from './pages/index'
 
 import configStore from './store'
-
 import './app.scss'
+// 引入登陆的action
+import {login} from './services/index'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -24,11 +25,11 @@ class App extends Component {
    * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
-  // eslint-disable-next-line react/sort-comp
   config: Config = {
     pages: [
-      'pages/home/index',
-      'pages/index/index'
+      'pages/map/index',
+      'pages/sign/add/index',
+      'pages/sign/location/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -38,7 +39,22 @@ class App extends Component {
     }
   }
 
-  componentDidMount () {}
+  componentDidMount () {
+    // 发起请求
+    console.log('小程序挂载的生命周期')
+    wx.login({
+      async success (res) {
+        if (res.code) {
+          //发起网络请求
+          let response = await login(res.code);
+          // 把openid存储到小程序的本地存储
+          wx.setStorageSync('openid', response.data.openid);
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
+  }
 
   componentDidShow () {}
 
@@ -57,4 +73,4 @@ class App extends Component {
   }
 }
 
-Taro.render(<App />, document.getElementById('app'))
+Taro.render(<App/>, document.getElementById('app'))
