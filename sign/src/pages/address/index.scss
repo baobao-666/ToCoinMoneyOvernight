@@ -1,0 +1,29 @@
+.box{
+    height: 100%;
+    background: #ccc;
+}
+.main{
+   height: 50rpx;
+  
+ 
+}
+.text{
+   height: 300rpx;
+    padding: 40rpx 0; 
+   background: #fff;
+
+}
+.address{
+    display: flex;
+    padding: 20rpx 0;
+    border-bottom: 1px solid #ccc;
+   
+}
+.address Text{
+    color: #9f9e9f;
+    font-size: 35rpx;
+    padding: 0 20rpx;
+    }
+.address input{
+    padding: 0 60rpx;
+}
