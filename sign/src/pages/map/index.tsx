@@ -29,7 +29,7 @@ class MapCom extends Component {
   componentDidHide () {}
   gomianshi=()=>{
     Taro.navigateTo({
-      url:'/pages/address/index'
+      url:'/pages/sign/address/index'
     })
   }
 

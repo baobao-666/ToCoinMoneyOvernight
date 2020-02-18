@@ -1,0 +1,53 @@
+.box{
+    height: 100%;
+   
+    
+}
+.main{
+   height: 50rpx;
+   position: relative;
+  
+ 
+}
+.text{
+   height: 500rpx;
+    padding: 40rpx 0; 
+   background: #fff;
+
+}
+.address{
+    display: flex;
+    padding: 20rpx 0;
+    border-bottom: 1px solid #ccc;
+   
+}
+.address Text{
+    color: #9f9e9f;
+    font-size: 35rpx;
+    padding: 0 20rpx;
+    }
+.address input{
+    padding: 0 60rpx;
+}
+.bei{
+    height: 230rpx;
+    border:2rpx solid #ccc;
+}
+.button{
+    position: absolute;
+   left: 0;
+   bottom: 420rpx;
+   display: flex;
+   justify-content: space-around;
+   padding: 0 20rpx;
+    
+
+}
+.button Button{
+   
+    height: 90rpx;
+    font-size: 30rpx;
+}
+.placeholderStyle{
+    font-size: 30rpx;
+}

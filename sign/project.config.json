@@ -43,9 +43,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "面试信息",
-					"pathName": "pages/address/index",
+					"id": 1,
+					"name": "pages/sign/address/index",
+					"pathName": "pages/sign/address/index",
+					"query": "",
 					"scene": null
 				}
 			]
