@@ -2,30 +2,12 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "sign",
 	"description": "一款精致的面试管理软件",
-	"appid": "wx31a03824b2f062b9",
+	"appid": "wx3375420e2c184d34  ",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": false,
 		"postcss": false,
-		"minified": false,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": true,
-		"checkInvalidKey": true,
-		"checkSiteMap": false,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
-	},
-	"permission": {
-		"scope.userLocation": {
-			"desc": "你的位置信息将用于小程序位置接口的效果展示"
-		}
+		"minified": false
 	},
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",

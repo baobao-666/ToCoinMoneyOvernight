@@ -27,6 +27,7 @@ class App extends Component {
    */
   config: Config = {
     pages: [
+      'pages/index/index',
       'pages/map/index',
       'pages/sign/add/index',
       'pages/sign/location/index'
