@@ -44,7 +44,7 @@
 				},
 				{
 					"id": 1,
-					"name": "pages/sign/address/index",
+					"name": "面试信息",
 					"pathName": "pages/sign/address/index",
 					"query": "",
 					"scene": null
