@@ -1,4 +1,4 @@
-import {addSign} from '../services/index'
+import {addSign,getSignList} from '../services/index'
 
 // 选择面试地址
 export const changeAddress = (address) => {
@@ -18,5 +18,16 @@ export const submitSign = (payload) => {
       })
     })
   }
+}
+//面试列表
+export const getSignListAction=(payload)=>{
+return dispatch=>{
+  getSignList(payload).then(res=>{
+    dispatch({
+type:'SIGN_LIST',
+payload:res.data
+    })
+  })
+}
 }
 

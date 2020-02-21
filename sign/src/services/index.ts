@@ -8,3 +8,7 @@ export function login(code): Promise<any>{
 export function addSign(params){
   return flyio.post('/sign', params);
 }
+//面试列表
+export function getSignList(params){
+  return flyio.get('/sign',params)
+}

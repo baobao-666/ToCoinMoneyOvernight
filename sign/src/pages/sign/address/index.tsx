@@ -103,7 +103,9 @@ class AddSign extends Component<PageState> {
   goLocation(){
     wx.navigateTo({
       url: '/pages/sign/location/index'
+      
     })
+    
   }
 
   render () {
@@ -129,15 +131,15 @@ class AddSign extends Component<PageState> {
          <Form onSubmit={this.formSubmit.bind(this)} onReset={this.formReset.bind(this)} className="text">
           <View className="address">
             <Text>公司名称</Text>
-            <Input placeholder="公司名称" value={this.state.company} onInput={e=>this.setState({company:e.detail.value})} ></Input>
+            <Input placeholder="公司名称" value={this.state.company} onInput={e=>this.setState({company:e.detail.value})} placeholder-class='placeholder'></Input>
           </View>
           <View className="address">
             <Text>公司电话</Text>
-            <Input placeholder="公司电话" value={this.state.phone} onInput={e=>this.setState({phone:e.detail.value})}></Input>
+            <Input placeholder="公司电话" value={this.state.phone} onInput={e=>this.setState({phone:e.detail.value})} placeholder-class='placeholder'></Input>
           </View>
           <View className="address">
             <Text>面试时间</Text>
-            <Input placeholder="面试时间" value={this.state.time} onInput={e=>this.setState({time:e.detail.value})}></Input>
+            <Input placeholder="面试时间" value={this.state.time} onInput={e=>this.setState({time:e.detail.value})} placeholder-class='placeholder'></Input>
           </View>
           <View className="address">
             <Text>面试地址</Text>
@@ -145,7 +147,7 @@ class AddSign extends Component<PageState> {
           </View>
           <View className="address">
             <Text>备注</Text>
-            <Input placeholder="备注" value={this.state.info} onInput={e=>this.setState({info:e.detail.value})}></Input>
+            <Input placeholder="备注" value={this.state.info} onInput={e=>this.setState({info:e.detail.value})} placeholder-class='placeholder'></Input>
           </View>
           <Button form-type="submit">确认</Button>
           <Button form-type="reset">重置</Button>

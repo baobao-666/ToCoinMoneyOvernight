@@ -1,0 +1,9 @@
+.tab{
+    height: 60rpx;
+display: flex;
+justify-content: space-around;
+border-bottom: 2rpx solid #ccc;
+}
+.active{
+    border-bottom: 2px solid #f00;
+}
