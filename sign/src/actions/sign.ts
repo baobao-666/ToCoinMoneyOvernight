@@ -24,7 +24,7 @@ export const getSignListAction=(payload)=>{
 return dispatch=>{
   getSignList(payload).then(res=>{
     dispatch({
-type:'SIGN_LIST',
+type:'SET_INTERVICE',
 payload:res.data
     })
   })

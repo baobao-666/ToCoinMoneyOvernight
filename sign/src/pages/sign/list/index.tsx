@@ -22,12 +22,12 @@ type PageState = {
 }
 
 type IProps = PageStateProps & PageDispatchProps & PageOwnProps
-interface SignList {
+interface Intervie {
     props: IProps
 }
 @connect(state => {
     return {
-        list: state.sign.list
+        list: state.sign.data
     }
 }, dispatch => {
     return {
@@ -36,7 +36,7 @@ interface SignList {
         }
     }
 })
-class SignList extends Component<{}, PageState>{
+class Intervie extends Component<{}, PageState>{
     config: Config = {
         navigationBarTitleText: '面试列表'
     }
@@ -113,7 +113,7 @@ Fn(index){
         )
     }
 }
-export default SignList as ComponentClass
+export default Intervie as ComponentClass
 
 
 
