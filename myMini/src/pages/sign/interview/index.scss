@@ -1,0 +1,33 @@
+.wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10rpx;
+    Text {
+      line-height: 80rpx;
+      &.active {
+        border-bottom: 3px solid blue;
+        color: blue;
+      }
+    }
+  }
+
+  .main {
+    flex: 1;
+    // overflow-y: scroll;
+    width: 100%;
+    .items{
+      width: 90%;
+      height: 200rpx;
+      border-radius: 17rpx;
+      background: red;
+      margin: 0 auto 20rpx;
+    }
+  }

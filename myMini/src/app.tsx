@@ -1,5 +1,7 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
+// taro样式
+import 'taro-ui/dist/style/index.scss'
 
 import Index from './pages/index/index'
 
@@ -32,6 +34,7 @@ class App extends Component {
       'pages/index/index',
       'pages/map/index',
       'pages/sign/add/index',
+      'pages/sign/interview/index',
       'pages/sign/location/index'
     ],
     window: {
@@ -41,7 +44,6 @@ class App extends Component {
       navigationBarTextStyle: 'black'
     }
   }
-
   componentDidMount() {
     // 发起请求
     wx.login({

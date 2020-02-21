@@ -1,6 +1,6 @@
 import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Text, Input, Form, Icon  } from '@tarojs/components'
+import { View, Text, Input, Button, Form, Icon  } from '@tarojs/components'
 import './index.scss'
 import { connect } from '@tarojs/redux'
 import QQMapWX from '../../../utils/map'

@@ -2,7 +2,7 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "myMini",
 	"description": "一面而就",
-	"appid": "touristappid",
+	"appid": "wx3375420e2c184d34",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,
@@ -12,5 +12,52 @@
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"condition": {}
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "地图",
+					"pathName": "pages/map/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "添加考试",
+					"pathName": "pages/sign/add/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "考试列表",
+					"pathName": "pages/sign/interview/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	},
+	"enablePullDownRefresh": true 
 }
