@@ -1,5 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
+
 // taro样式
 import 'taro-ui/dist/style/index.scss'
 

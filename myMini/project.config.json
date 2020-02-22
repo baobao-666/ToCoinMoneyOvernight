@@ -12,6 +12,7 @@
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"enablePullDownRefresh": true,
 	"condition": {
 		"search": {
 			"current": -1,
@@ -58,6 +59,5 @@
 				}
 			]
 		}
-	},
-	"enablePullDownRefresh": true 
+	}
 }

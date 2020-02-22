@@ -1,11 +1,11 @@
 import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Text, Input, Button, Form, Icon } from '@tarojs/components'
+import { View, Text} from '@tarojs/components'
 import './index.scss'
 import { connect } from '@tarojs/redux'
 import { getSignListAction } from '../../../actions/sign'
 
-
+import { AtTabs, AtTabsPane } from 'taro-ui'
 
 type PageStateProps = {
     list: Array<{
@@ -99,7 +99,21 @@ class SignList extends Component<{}, PageState> {
         let { list } = this.props
         console.log("list===>", list)
         let { curIndex } = this.state
+        // const tabList = [{ title: '标签页1' }, { title: '标签页2' }, { title: '标签页3' }]
         return (
+
+        //     <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
+        //     <AtTabsPane current={this.state.current} index={0} >
+        //       <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;' >标签页一的内容</View>
+        //     </AtTabsPane>
+        //     <AtTabsPane current={this.state.current} index={1}>
+        //       <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页二的内容</View>
+        //     </AtTabsPane>
+        //     <AtTabsPane current={this.state.current} index={2}>
+        //       <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页三的内容</View>
+        //     </AtTabsPane>
+        //   </AtTabs>
+
             <View className='wrap'>
                 <View className="header" >
                     {

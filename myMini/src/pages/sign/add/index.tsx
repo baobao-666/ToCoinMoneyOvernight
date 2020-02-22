@@ -160,8 +160,10 @@ class AddSign extends Component<PageState> {
             <Text>备注</Text>
             <Input placeholder="备注" value={this.state.info} onInput={e => this.setState({ info: e.detail.value })}></Input>
           </View>
-          <Button form-type="submit">确认</Button>
-          <Button form-type="reset">重置</Button>
+          <View className="btns">
+            <Button form-type="submit">确认</Button>
+            <Button form-type="reset">重置</Button>
+          </View>
         </Form>
       </View>
     )
