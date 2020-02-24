@@ -8,6 +8,7 @@ import { connect } from '@tarojs/redux'
 import { getIntervie } from '../../../actions/sign'
 import { View, Text, ScrollView } from '@tarojs/components'
 import { AtActivityIndicator } from 'taro-ui'
+import { ITouchEvent } from '@tarojs/components/types/common'
 
 type PageStateProps = {
     list: Array<{
@@ -83,7 +84,8 @@ class Intervie extends Component<{}, PageState> {
         },
         upDragStyle: {//上拉图标样式
             height: 0 + 'px'
-        }
+        },
+        curIndex:0
     }
     componentDidShow() {
         let params = { ... this.state.params }
@@ -109,6 +111,13 @@ class Intervie extends Component<{}, PageState> {
         let s: any = date.getSeconds();
         s = s < 10 ? ('0' + s) : s;//秒补0
         return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
+
+    }
+    jump(e:ITouchEvent){
+        console.log(e)
+// this.setState({
+//     curIndex:e.target
+// })
 
     }
     onScroll = (e) => {
@@ -149,7 +158,7 @@ class Intervie extends Component<{}, PageState> {
                 <View className="tabheader" >
                     {
                         this.state.tabList.map((item, index) => {
-                            return <Text key={index} >{item.title}</Text>
+                            return <Text data-status={index} className={this.state.curIndex===index?"active":""} key={index} onClick={this.jump} >{item.title}</Text>
                         })
                     }
                 </View>
