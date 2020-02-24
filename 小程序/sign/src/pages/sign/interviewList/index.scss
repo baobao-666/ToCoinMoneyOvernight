@@ -1,17 +1,33 @@
-.wrap {
+
+.downDragBox{
   width: 100%;
-  height: 100%;
+  top: 0px;
   display: flex;
-  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  position: absolute;
+}
+.upDragBox{
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  position: absolute;
 }
 
+.dragUpdata{height: 100%;width: 100%;position: absolute;}
 .tabheader {
   width: 100%;
   height: 100rpx;
   display: flex;
   justify-content: space-around;
 
-  Text {
+  >Text {
     line-height: 100rpx;
 
     &.active {
@@ -20,20 +36,18 @@
     }
   }
 }
-
 .context {
-  flex: 1;
-overflow-y: scroll;
+  width: 100%;
+
   .item {
     width: 100%;
     height: 200rpx;
-    background: skyblue;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 5rpx 10rpx;
+    padding: 10rpx 15rpx;
     box-sizing: border-box;
-
+       margin: 20rpx 0 ;
     .item_text {
       flex: 1;
     }
