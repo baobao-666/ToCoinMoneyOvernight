@@ -21,13 +21,19 @@
 
   .main {
     flex: 1;
-    // overflow-y: scroll;
     width: 100%;
-    .items{
-      width: 90%;
-      height: 200rpx;
-      border-radius: 17rpx;
-      background: red;
-      margin: 0 auto 20rpx;
-    }
   }
+  .upDrag{
+      position: relative;
+  }
+  .downDragBox{
+    top:80rpx;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: absolute;
+  }
+  .dragUpdata{height: 100%;width: 100%;position: absolute;}
