@@ -1,14 +1,16 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 
-// taro样式
-import 'taro-ui/dist/style/index.scss'
 
 import Index from './pages/index/index'
 
 import configStore from './store'
 
 import './app.scss'
+
+// taro样式
+import 'taro-ui/dist/style/index.scss'
+
 
 import { login } from './services/index'
 
@@ -36,15 +38,28 @@ class App extends Component {
       'pages/map/index',
       'pages/sign/add/index',
       'pages/sign/interview/index',
-      'pages/sign/location/index'
+      'pages/sign/location/index',
+      'pages/sign/detail/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    permission: {
+      "scope.userLocation": {
+        "desc": "你的位置信息将用于小程序定位"
+      }
+    },
+    plugins: {
+      "routePlan": {
+        "version": "1.0.5",
+        "provider": "wx50b5593e81dd937a"
+      }
     }
   }
+
   componentDidMount() {
     // 发起请求
     wx.login({
@@ -80,3 +95,4 @@ class App extends Component {
 }
 
 Taro.render(<App />, document.getElementById('app'))
+

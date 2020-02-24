@@ -31,6 +31,7 @@ export const submitSign = (payload) => {
 export const getSignListAction = (payload) => {
   return dispatch=>{
     getSignList(payload).then(res=>{
+      console.log("res.....",res)
       dispatch({
         type: 'SIGN_LIST',
         payload: res.data

@@ -18,11 +18,14 @@
       }
     }
   }
-
   .main {
     flex: 1;
-    width: 100%;
+    background:red;
+    .item{
+      margin-top: 30rpx;
+    }
   }
+
   .upDrag{
       position: relative;
   }

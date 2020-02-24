@@ -6,6 +6,8 @@ import { connect } from '@tarojs/redux'
 import { getSignListAction } from '../../../actions/sign'
 
 import { AtTabs, AtTabsPane, AtActivityIndicator } from 'taro-ui'
+import { ITouchEvent } from '@tarojs/components/types/common'
+
 
 type PageStateProps = {
     list: Array<{
@@ -18,10 +20,16 @@ type PageDispatchProps = {
 type PageOwnProps = {}
 
 type PageState = {
-    status: number,
-    page: number,
-    pageSize: number,
-    curIndex: number
+    params: {
+        status: number,
+        page: number,
+        pageSize: number
+    }
+    curIndex: number,
+    tablist: {
+        title: string;
+        id: number;
+    }[]
 }
 
 type IProps = PageStateProps & PageDispatchProps & PageOwnProps
@@ -42,15 +50,18 @@ interface SignList {
         }
     }
 })
+
 class SignList extends Component<{}, PageState> {
     config: Config = {
         navigationBarTitleText: '面试列表'
     }
 
     state = {
-        status: 2,
-        page: 1,
-        pageSize: 10,
+        params: {
+            status: 2,
+            page: 1,
+            pageSize: 10,
+        },
         tablist: [
             {
                 title: "未开始",
@@ -84,20 +95,16 @@ class SignList extends Component<{}, PageState> {
 
     componentDidShow() {
         let params = { ...this.state };
-        if (params.status === 2) {
-            delete params.status;
+        console.log("params===>", params)
+        if (params.params.status === 2) {
+            delete params.params.status;
         }
-        this.props.getSignList(params);
+        this.props.getSignList(params.params);
     }
 
     componentDidHide() { }
 
-    changeC(index) {
-        console.log(index)
-        this.setState({
-            curIndex: index
-        })
-    }
+   
     //监听用户下拉刷新事件。
     onPullDownRefresh() {
 
@@ -108,7 +115,7 @@ class SignList extends Component<{}, PageState> {
 
     // 滚动触发
     onScroll = (e) => {
-        console.log("e....",e)
+        console.log("e....", e)
     }
     //滚动到顶部/左边，会触发 scrolltoupper 事件
     onScrollToUppers = () => {
@@ -123,7 +130,7 @@ class SignList extends Component<{}, PageState> {
     //获取当前年月日时分秒
     setTime = (time): string => {
         let date = new Date(time * 1);
-    
+
         let y = date.getFullYear();
         let MM: any = date.getMonth() + 1;
         MM = MM < 10 ? ('0' + MM) : MM;//月补0
@@ -139,6 +146,27 @@ class SignList extends Component<{}, PageState> {
         return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
     }
 
+    // changeStatus = (e:ITouchEvent)=>{
+    //     console.log("eeeeeeeeeee",e)
+    //     this.setState({
+    //       status: e.target.dataset.status
+    //     })
+    //   }
+
+      changeC(index) {
+        console.log(index)
+        this.setState({
+            curIndex: index
+        })
+    //    this.changeStatus(index)
+    }
+
+
+    jumpDetai = (e:ITouchEvent)=>{
+        console.log(e)
+        console.log(e.currentTarget.dataset.id)
+        // wx.navigateTo({url:'/pages/sign/detail/index?id='+e.currentTarget.dataset.id});
+      }
     render() {
         let { curIndex } = this.state
         return (
@@ -160,35 +188,39 @@ class SignList extends Component<{}, PageState> {
                     {
                         this.state.tablist.map((item, index) => {
                             return <Text key={index} onClick={() => this.changeC(index)} className={curIndex == index ? 'active' : ''}>{item.title}</Text>
+                            
+                            // <Text key={index} data-status={index-1} className={index-1 == this.state.params.status?'active':''} onClick={this.changeStatus}>{item.title}</Text>
                         })
                     }
                 </View>
 
-                 <ScrollView
+                <View className='main'>
+                    {
+                        this.props.list.length > 0 && this.props.list.map((item, index) => {
+                            return <View className="item" key={index} onClick={this.jumpDetai}>
+                                <Text>{item.company}</Text>
+                                <Text>{item.address}</Text>
+                                <Text className="item_text" >面试时间:<Text>{this.setTime(item.start_time)}</Text> </Text>
+                                <Text className='mess' >未开始</Text>
+                                <Text className='remind' >未提醒</Text>
+                            </View>
+                        })
+                    }
+
+                </View>
+
+                {/* <ScrollView
                     className="dragUpdata"
                     scrollY={true}
                     onScroll={(e) => this.onScroll(e)}
                     onScrollToUpper={() => this.onScrollToUppers()}
                     onScrollToLower={() => this.onScrollToLowers()}
                 >
-                    <View className='main'>
-                        {/* {
-                            this.props.list.length > 0 && this.props.list.map((item, index) => {
-                                return <View className="item" key={index} >
-                                    <Text className="item_text" > {item.description}</Text>
-                                    <Text className="item_text" > {item.company}{item.address} </Text>
-                                    <Text className="item_text" >面试时间:<Text>{this.setTime(item.start_time)}</Text> </Text>
-                                    <Text className='mess' >未开始</Text>
-                                    <Text className='remind' >未提醒</Text>
-                                </View>
-                            })
-                        } */}
-
-                    </View>
-                </ScrollView>
+                  
+                </ScrollView> */}
 
                 <View className='upDrag'>
-                        <AtActivityIndicator mode='center' content="加载中。。。"></AtActivityIndicator>
+                    <AtActivityIndicator mode='center' content="加载中。。。"></AtActivityIndicator>
                 </View>
             </View >
         )
