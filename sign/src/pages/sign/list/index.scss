@@ -7,3 +7,33 @@ border-bottom: 2rpx solid #ccc;
 .active{
     border-bottom: 2px solid #f00;
 }
+.cont .item{
+padding: 20rpx 0;
+}
+.cont .item .item_text{
+    display: block;
+}
+.dragUpdataPage{height: 50vh;position: relative;overflow: hidden;
+    .downDragBox{
+        width: 100%;
+        top: 0px;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        position: absolute;
+    }
+    .upDragBox{
+        bottom: 0px;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        position: absolute;
+    }
+    .dragUpdata{height: 100%;width: 100%;position: absolute;}
+    .downText{margin-left: 20px;}
+}
