@@ -26,6 +26,7 @@ return dispatch=>{
     dispatch({
 type:'SET_INTERVICE',
 payload:res.data
+
     })
   })
 }
