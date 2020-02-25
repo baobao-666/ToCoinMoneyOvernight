@@ -76,7 +76,7 @@ class SignDetail extends Component<{}, PageState> {
     return (
       <View>
         <Text>{info.company}</Text>
-        <Text onClick={this.goMap}>{JSON.parse(info.address).address}</Text>
+        <Text onClick={this.goMap}>{info.address}</Text>
       </View>
     )
   }

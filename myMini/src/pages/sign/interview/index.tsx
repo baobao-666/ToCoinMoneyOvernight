@@ -104,7 +104,7 @@ class SignList extends Component<{}, PageState> {
 
     componentDidHide() { }
 
-   
+
     //监听用户下拉刷新事件。
     onPullDownRefresh() {
 
@@ -153,20 +153,23 @@ class SignList extends Component<{}, PageState> {
     //     })
     //   }
 
-      changeC(index) {
+    changeC(index) {
         console.log(index)
         this.setState({
             curIndex: index
         })
-    //    this.changeStatus(index)
+        //    this.changeStatus(index)
+        if (index = 0) {
+
+        }
     }
 
 
-    jumpDetai = (e:ITouchEvent)=>{
-        console.log(e)
+    jumpDetai = (e: ITouchEvent) => {
+        // console.log(e)
         console.log(e.currentTarget.dataset.id)
-        // wx.navigateTo({url:'/pages/sign/detail/index?id='+e.currentTarget.dataset.id});
-      }
+        wx.navigateTo({url:'/pages/sign/detail/index?id='+e.currentTarget.dataset.id});
+    }
     render() {
         let { curIndex } = this.state
         return (
@@ -188,7 +191,7 @@ class SignList extends Component<{}, PageState> {
                     {
                         this.state.tablist.map((item, index) => {
                             return <Text key={index} onClick={() => this.changeC(index)} className={curIndex == index ? 'active' : ''}>{item.title}</Text>
-                            
+
                             // <Text key={index} data-status={index-1} className={index-1 == this.state.params.status?'active':''} onClick={this.changeStatus}>{item.title}</Text>
                         })
                     }
@@ -197,7 +200,7 @@ class SignList extends Component<{}, PageState> {
                 <View className='main'>
                     {
                         this.props.list.length > 0 && this.props.list.map((item, index) => {
-                            return <View className="item" key={index} onClick={this.jumpDetai}>
+                            return <View className="item" key={index} onClick={this.jumpDetai} data-id={item.id}>
                                 <Text>{item.company}</Text>
                                 <Text>{item.address}</Text>
                                 <Text className="item_text" >面试时间:<Text>{this.setTime(item.start_time)}</Text> </Text>

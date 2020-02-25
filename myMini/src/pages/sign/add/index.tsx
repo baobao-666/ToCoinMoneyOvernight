@@ -107,9 +107,9 @@ class AddSign extends Component<PageState> {
     })
   }
 
-  // goList(){
+  // goInter(){
   //   wx.navigateto({
-  //     url:'/pages/sign/list/index'
+  //     url:'/pages/sign/interview/index'
   //   })
   // }
 
